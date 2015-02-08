@@ -1,1 +1,11 @@
-Type something here!
+@import url('pdf.css');
+
+@page {
+  marks: crop;
+  -ah-printer-marks-line-color: cmyk(0%, 0%, 0%, 100%);
+}
+
+/* Suppress cover image */
+body[data-type="book"] > figure[data-type="cover"] { display: none }
+
+figure[data-type="cover"] { page: blank }
