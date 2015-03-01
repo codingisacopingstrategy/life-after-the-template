@@ -1,0 +1,31 @@
+{
+  "name": "life-after-the-template",
+  "version": "0.0.1",
+  "description": "e-Publication on the relation between form and content in digital publishing platforms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codingisacopingstrategy/life-after-the-template.git"
+  },
+  "keywords": [
+    "form",
+    "content",
+    "css",
+    "epub",
+    "html",
+    "print"
+  ],
+  "author": "Eric Schrijver",
+  "license": "CC BY SA 4.0",
+  "bugs": {
+    "url": "https://github.com/codingisacopingstrategy/life-after-the-template/issues"
+  },
+  "homepage": "https://github.com/codingisacopingstrategy/life-after-the-template",
+  "dependencies": {
+    "express": "^4.12.0",
+    "swig": "^1.4.2"
+  }
+}
