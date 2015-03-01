@@ -1,7 +1,7 @@
-* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,13 +19,13 @@ p, dd { /* general text styles */
   line-height: 125%;
 }
 
-section[data-type="preface"] > h1 + p, 
-div[data-type="part"] > h1 + p, 
-section[data-type="chapter"] > h1 + p, 
-section[data-type="chapter"] > h1 + div.author p, 
-section[data-type="sect1"] > h1 + p, 
+section[data-type="preface"] > h1 + p,
+div[data-type="part"] > h1 + p,
+section[data-type="chapter"] > h1 + p,
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
 section[data-type="sect2"] > h2 + p,
-section[data-type="sect3"] > h3 + p { 
+section[data-type="sect3"] > h3 + p {
   text-indent: 0px; /* first paragraph following a heading has no indent */
 }
 
@@ -41,7 +41,7 @@ section[data-type="titlepage"] h1 {
   font-family: serif;
 }
 
-section[data-type="titlepage"] h2, 
+section[data-type="titlepage"] h2,
 section[data-type="copyright-page"] h1 {
   font-family: sans-serif;
 }
@@ -139,7 +139,7 @@ nav[data-type="toc"] > h1 { /* table of contents heading */
 
 /* defining fonts for the table of contents */
 
-nav[data-type="toc"] a { 
+nav[data-type="toc"] a {
   text-decoration: none;
 }
 
@@ -147,9 +147,9 @@ nav[data-type="toc"] li {
   font-family: sans-serif;
 }
 
-nav[data-type="toc"] li[data-type="chapter"], 
-nav[data-type="toc"] li[data-type="part"], 
-nav[data-type="toc"] li[data-type="appendix"] { 
+nav[data-type="toc"] li[data-type="chapter"],
+nav[data-type="toc"] li[data-type="part"],
+nav[data-type="toc"] li[data-type="appendix"] {
   font-size: 1em;
   line-height: 120%;
   margin-left: 0;
@@ -158,11 +158,11 @@ nav[data-type="toc"] li[data-type="appendix"] {
 
 /* entries for parts in the table of contents */
 
-nav[data-type="toc"] li[data-type="part"] { 
+nav[data-type="toc"] li[data-type="part"] {
   margin-top: 25px;
 }
 
-nav[data-type="toc"] li[data-type="part"] > a { 
+nav[data-type="toc"] li[data-type="part"] > a {
   border-bottom: 1px solid #333;
   width: 100%;
   display: inline-block;
@@ -175,18 +175,18 @@ nav[data-type="toc"] li[data-type="part"] ol {
 
 /* entries for chapters and appendixes in the table of contents */
 
-nav[data-type="toc"] li[data-type="chapter"] { 
+nav[data-type="toc"] li[data-type="chapter"] {
   margin-top: 20px;
 }
 
-nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
-nav[data-type="toc"] li[data-type="appendix"] { 
+nav[data-type="toc"] li[data-type="chapter"]:last-of-type,
+nav[data-type="toc"] li[data-type="appendix"] {
   margin-bottom: 20px;
 }
 
 /* entries for sub-sections */
 
-nav[data-type="toc"] li[data-type="chapter"] ol { 
+nav[data-type="toc"] li[data-type="chapter"] ol {
   font-family: sans-serif;
   font-size: 1em;
   line-height: 120%;
@@ -194,58 +194,58 @@ nav[data-type="toc"] li[data-type="chapter"] ol {
   text-indent: -10px;
 }
 
-nav[data-type="toc"] li[data-type="chapter"] ol ol { 
+nav[data-type="toc"] li[data-type="chapter"] ol ol {
   margin-left: 10px;
   text-indent: -10px;
 }
 
 /* front and backmatter in the table of contents */
 
-nav[data-type="toc"] li[data-type="preface"], 
-nav[data-type="toc"] li[data-type="foreword"], 
-nav[data-type="toc"] li[data-type="glossary"], 
+nav[data-type="toc"] li[data-type="preface"],
+nav[data-type="toc"] li[data-type="foreword"],
+nav[data-type="toc"] li[data-type="glossary"],
 nav[data-type="toc"] li[data-type="index"] {
   font-size: 1em;
   line-height: 120%;
 }
 
-nav[data-type="toc"] li[data-type="preface"] ol, 
+nav[data-type="toc"] li[data-type="preface"] ol,
 nav[data-type="toc"] li[data-type="foreword"] ol {
   display: none;
 }
 
 /* page breaks after all chapter-level sections */
 
-section[data-type="preface"], 
-div[data-type="part"], 
-section[data-type="chapter"], 
+section[data-type="preface"],
+div[data-type="part"],
+section[data-type="chapter"],
 section[data-type="appendix"] {
-  page-break-after: always; 
+  page-break-after: always;
 }
 
 /* preface, chapter, and appendix headings */
 
 /* heading font is sans serif */
 
-nav[data-type="toc"] > h1, 
-div[data-type="part"] > h1, 
-section[data-type="preface"] > h1, 
-section[data-type="chapter"] > h1, 
-section[data-type="appendix"] > h1, 
+nav[data-type="toc"] > h1,
+div[data-type="part"] > h1,
+section[data-type="preface"] > h1,
+section[data-type="chapter"] > h1,
+section[data-type="appendix"] > h1,
 section[data-type="sect1"] h1 {
   font-family: serif;
   line-height: 120%;
 }
 
-section[data-type="sect2"] h2, 
+section[data-type="sect2"] h2,
 section[data-type="sect3"] h3 {
   font-family: sans-serif;
   line-height: 120%;
 }
 
 /* shared styles for all chapter-level headings */
-section[data-type="preface"] > h1, 
-section[data-type="chapter"] > h1, 
+section[data-type="preface"] > h1,
+section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1 {
   font-size: 1.8em;
   margin-top: 70px;
@@ -288,7 +288,7 @@ ul, ol { /* bulleted and numbered lists */
   margin: 10px 0 10px 0;
 }
 
-ul li, ol li, 
+ul li, ol li,
 ul li p, ol li p {
   font-family: sans-serif;
   font-size: 1em;
@@ -431,7 +431,7 @@ aside p { /* sidebar text */
 
 /* admonitions */
 
-div[data-type="note"], 
+div[data-type="note"],
 div[data-type="warning"] { /* admonition containers */
   border-top: 2px solid #888;
   border-bottom: 1px solid #d8d8d8;
@@ -440,7 +440,7 @@ div[data-type="warning"] { /* admonition containers */
   page-break-inside: avoid; /* avoid breaking admonitions across pages */
 }
 
-div[data-type="note"] h1, 
+div[data-type="note"] h1,
 div[data-type="warning"] h1 { /* admonition titles */
   color: #000;
   font-family: sans-serif;
@@ -452,7 +452,7 @@ div[data-type="warning"] h1 { /* admonition titles */
   padding: 0;
 }
 
-div[data-type="note"] p, 
+div[data-type="note"] p,
 div[data-type="warning"] p { /* admonition text */
   font-family: serif;
   font-size: 1em;
@@ -482,9 +482,9 @@ table pre { /* code blocks within tables */
   text-indent: 0;
 }
 
-div[data-type="note"] code, 
-div[data-type="warning"] code, 
-aside code, 
+div[data-type="note"] code,
+div[data-type="warning"] code,
+aside code,
 table code { /* inline code within notes, sidebars and tables */
   font-size: inherit;
   line-height: inherit;
@@ -559,7 +559,7 @@ div.navbar p a {
   }
 }
 
-/* iPhone [portrait + landscape] 
+/* iPhone [portrait + landscape]
 --------------------------------------------------------------------------- */
 
 @media screen and (max-width: 480px) {
