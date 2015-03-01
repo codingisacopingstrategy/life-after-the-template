@@ -55,7 +55,7 @@ body[data-type="book"] > figure[data-type="cover"] + section {
     margin-left: -0.65in;
     margin-top: 6pt;
   }
-  @sidenote { margin-left: -1.25in; } 
+  @sidenote { margin-left: -1.25in; }
 }
 
 @page :right {
@@ -75,7 +75,7 @@ body[data-type="book"] > figure[data-type="cover"] + section {
     margin-right: -0.65in;
     margin-top: 6pt;
   }
-  @sidenote { margin-right: -1.25in; } 
+  @sidenote { margin-right: -1.25in; }
 }
 
 @page :blank { /* defining a truly blank master page */
@@ -92,15 +92,15 @@ li > p, dd p,
 section[data-type="titlepage"] p,
 section[data-type="copyright-page"] p,
 p[data-type="author"], p.author,
-section[data-type="preface"] > h1 + p, 
+section[data-type="preface"] > h1 + p,
 section[data-type="foreword"] > h1 + p,
-div[data-type="part"] > h1 + p, 
-section[data-type="chapter"] > h1 + p, 
-section[data-type="chapter"] > h1 + div.author p, 
-section[data-type="sect1"] > h1 + p, 
+div[data-type="part"] > h1 + p,
+section[data-type="chapter"] > h1 + p,
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
 section[data-type="sect2"] > h2 + p,
 section[data-type="sect3"] > h3 + p,
-h1 + p, h2 + p, h3 + P { 
+h1 + p, h2 + p, h3 + P {
   text-indent: 0; /* first paragraph following a heading has no indent */
 }
 
@@ -130,8 +130,8 @@ a {
   text-decoration: none;
 }
 
-/* counters add auto-numbering to elements in the book. 
-   This reset initiates the counters, enabling them 
+/* counters add auto-numbering to elements in the book.
+   This reset initiates the counters, enabling them
    to begin numbering correctly. */
 
 body[data-type="book"] {
@@ -142,7 +142,7 @@ body[data-type="book"] {
 /* -------------------------------------------------------------- */
 /* -------------------------- Titlepage ------------------------- */
 /* -------------------------------------------------------------- */
-section[data-type="halftitlepage"], 
+section[data-type="halftitlepage"],
 section[data-type="titlepage"] {
   page: blank;
   text-align: right;
@@ -150,7 +150,7 @@ section[data-type="titlepage"] {
   page-break-after: always;
 }
 
-section[data-type="halftitlepage"] h1, 
+section[data-type="halftitlepage"] h1,
 section[data-type="titlepage"] h1 {
   font-family: Merriweather, serif, ArialUnicodeMS;
   border-bottom: 0.5pt solid cmyk(0%,0%,0%,100%);
@@ -159,9 +159,9 @@ section[data-type="titlepage"] h1 {
   text-align: left;
 }
 
-section[data-type="halftitlepage"] h2, 
+section[data-type="halftitlepage"] h2,
 section[data-type="titlepage"] h2 {
-  font-family: SourceSansPro-Semibold, ArialUnicodeMS; 
+  font-family: SourceSansPro-Semibold, ArialUnicodeMS;
   font-size: 13pt;
   text-align: left;
 }
@@ -309,7 +309,7 @@ section[data-type="dedication"].praise blockquote p span.emphasis em {
   }
 }
 
-@page toc:blank { 
+@page toc:blank {
   @bottom-left-corner {
     content: none;
   }
@@ -427,7 +427,7 @@ li[data-type="sect1"], li[data-type="sect2"] {
   font-weight: normal;
   page-break-after: auto;
   margin-bottom: 5pt;
-  margin-top: 5pt; /* otherwise, cascades from above */ 
+  margin-top: 5pt; /* otherwise, cascades from above */
 }
 
 li[data-type="sect1"] {
@@ -466,12 +466,12 @@ nav[data-type="toc"] span[data-type="footnote"] {
 
 /* shared styles for all chapter-level headings */
 section[data-type="preface"] > h1,
-section[data-type="foreword"] > h1, 
-section[data-type="chapter"] > h1, 
+section[data-type="foreword"] > h1,
+section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1,
 section[data-type="index"] > h1,
 section[data-type="glossary"] > h1,
-section[data-type="colophon"] h1, 
+section[data-type="colophon"] h1,
 section.abouttheauthor h1  {
   font-family: 'Merriweather', serif, ArialUnicodeMS;
   line-height: 22pt;
@@ -499,7 +499,7 @@ section[data-type="appendix"] > h1 {
 }
 
 /* chapter and appendix headings include auto-numbering */
-section[data-type="chapter"] > h1:after, 
+section[data-type="chapter"] > h1:after,
 section[data-type="appendix"] > h1:after {
   font-size: 65pt;
   font-family: 'SourceSansPro-ExtraLight', sans-serif, ArialUnicodeMS;
@@ -595,7 +595,7 @@ section[data-type="preface"] > h1 {
   }
 }
 
-@page preface:blank { 
+@page preface:blank {
   @bottom-left-corner {
     content: none;
   }
@@ -652,7 +652,7 @@ section[data-type="foreword"] > h1 {
   }
 }
 
-@page foreword:blank { 
+@page foreword:blank {
   @bottom-left-corner {
     content: none;
   }
@@ -738,7 +738,7 @@ div[data-type="part"] > h1:before {
   }
 }
 
-@page chapter:blank { 
+@page chapter:blank {
   @bottom-left-corner {
     content: none;
   }
@@ -849,7 +849,7 @@ figure {
 
 figure figcaption {
   display: block;
-  -ah-float: outside page; 
+  -ah-float: outside page;
   clear: both;
   margin-left: -1.25in;
   margin-right: -1.25in;
@@ -889,7 +889,7 @@ img {
   margin: 15pt auto;
 }
 
-figure img { 
+figure img {
   max-width: 4.375in;
   margin: 0 auto;
 }
@@ -949,12 +949,12 @@ aside dt {
   font-family: Merriweather, serif, ArialUnicodeMS;
   font-weight: bold;
 }
-  
+
 /* -------------------------------------------------------------- */
 /* ------------------------ Admonitions --------------------------*/
 /* -------------------------------------------------------------- */
 
-div[data-type="note"], 
+div[data-type="note"],
 div[data-type="warning"],
 div[data-type="tip"],
 div[data-type="caution"],
@@ -967,7 +967,7 @@ div[data-type="important"]
   page-break-inside: avoid;
 }
 
-div[data-type="note"] p, 
+div[data-type="note"] p,
 div[data-type="warning"] p,
 div[data-type="tip"] p,
 div[data-type="caution"] p,
@@ -980,7 +980,7 @@ div[data-type="important"] p { /* admon text */
   margin-bottom: 6pt;
 }
 
-div[data-type="note"] li, 
+div[data-type="note"] li,
 div[data-type="warning"] li,
 div[data-type="tip"] li,
 div[data-type="caution"] li,
@@ -989,7 +989,7 @@ div[data-type="important"] li {
   font-size: 7.5pt;
 }
 
-div[data-type="note"] h1, 
+div[data-type="note"] h1,
 div[data-type="warning"] h1,
 div[data-type="tip"] h1,
 div[data-type="caution"] h1,
@@ -1002,14 +1002,14 @@ div[data-type="important"] h1 { /* admonition titles */
   margin-top: 0;
 }
 
-div[data-type="note"] pre, 
+div[data-type="note"] pre,
 div[data-type="warning"] pre,
 div[data-type="tip"] pre,
 div[data-type="caution"] pre,
 div[data-type="important"] pre {
   font-size: 7.5pt;
   margin: 0 0 6pt 4pt;
-} 
+}
 
 /* -------------------------------------------------------------- */
 /* ---------------------------- Code -----------------------------*/
@@ -1216,7 +1216,7 @@ dd { /* definition list descriptions */
 }
 
 /* turning off justification for lists*/
-ol li ul li p{ 
+ol li ul li p{
  text-align: left;
 }
 
@@ -1301,7 +1301,7 @@ div[data-type="index"] {
 a[data-type="index:locator"] { content: target-counter(attr(href, url), page); }
 
 /*index markers as roman numrals*/
-a[data-type="index:locator"][data-xref-pagenum-style="lower-roman"] 
+a[data-type="index:locator"][data-xref-pagenum-style="lower-roman"]
 { content: target-counter(attr(href, url), page, lower-roman) }
 
 section[data-type="index"] ul {
@@ -1335,7 +1335,7 @@ section[data-type="glossary"] { page: glossary }
 @page glossary:first {
   @top-right { content: none }
 }
-  
+
 @page glossary:left {
   @bottom-left { content: counter(page);
       font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
@@ -1356,7 +1356,7 @@ section[data-type="glossary"] { page: glossary }
   }
 }
 
-section[data-type="glossary"] dl { 
+section[data-type="glossary"] dl {
   column-count: 2;
   column-gap: 0.25in;
   -ah-column-fill: balance;
@@ -1407,7 +1407,7 @@ section[data-type="bibliography"] { page: bibliography }
 @page bibliography:first {
   @top-right { content: none }
 }
-  
+
 @page bibliography:left {
   @bottom-left { content: counter(page);
       font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
@@ -1516,7 +1516,7 @@ div.comment-identifier {
 
 /* remove <img> and <i> tags */
 div.comment-identifier img,
-div.comment-identifier i { display: none } 
+div.comment-identifier i { display: none }
 
 
 /* --------------------------------------------------------------------- */
@@ -1533,23 +1533,23 @@ figure[data-type="cover"] {
 section[data-type="copyright.page"] {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: "Copyright"; 
+  bookmark-label: "Copyright";
 }
 
 nav[data-type="toc"] {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: "Table of Contents"; 
+  bookmark-label: "Table of Contents";
 }
 
 section[data-type="foreword"] {
-  bookmark-level: 1; 
+  bookmark-level: 1;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
 
 section[data-type="preface"] {
-  bookmark-level: 1; 
+  bookmark-level: 1;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
@@ -1568,14 +1568,14 @@ section[data-type="chapter"] {
   bookmark-label: attr(data-pdf-bookmark);
 }
 
-section[data-type="sect1"] { 
-  bookmark-level: 2; 
+section[data-type="sect1"] {
+  bookmark-level: 2;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
 
-section[data-type="sect2"] { 
-  bookmark-level: 3; 
+section[data-type="sect2"] {
+  bookmark-level: 3;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
@@ -1595,25 +1595,25 @@ section[data-type="glossary"] {
 section[data-type="bibliography"] {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: attr(data-pdf-bookmark); 
+  bookmark-label: attr(data-pdf-bookmark);
 }
 
 section[data-type="index"] {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: "Index"; 
+  bookmark-label: "Index";
 }
 
 section[data-type="afterword"] {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: attr(data-pdf-bookmark); 
+  bookmark-label: attr(data-pdf-bookmark);
 }
 
 section.abouttheauthor {
   bookmark-level: 1;
   bookmark-state: closed;
-  bookmark-label: attr(data-pdf-bookmark); 
+  bookmark-label: attr(data-pdf-bookmark);
 }
 
 /* ----------- Bookmark logic for titles that do have parts: ----------- */
@@ -1626,14 +1626,14 @@ div[data-type="part"] section[data-type="chapter"] {
   bookmark-label: attr(data-pdf-bookmark);
 }
 
-div[data-type="part"] section[data-type="sect1"] { 
-  bookmark-level: 3; 
+div[data-type="part"] section[data-type="sect1"] {
+  bookmark-level: 3;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
 
-div[data-type="part"] section[data-type="sect2"] { 
-  bookmark-level: 4; 
+div[data-type="part"] section[data-type="sect2"] {
+  bookmark-level: 4;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
@@ -1642,15 +1642,15 @@ div[data-type="part"] section[data-type="afterword"] {
   bookmark-level: 2;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
-} 
+}
 
-div[data-type="part"] section[data-type="appendix"] { 
+div[data-type="part"] section[data-type="appendix"] {
   bookmark-level: 2;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
 }
 
-div[data-type="part"] section[data-type="glossary"] { 
+div[data-type="part"] section[data-type="glossary"] {
   bookmark-level: 2;
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark);
