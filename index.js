@@ -24,7 +24,7 @@ var outerContext = function() {
 
 // This is the context necessary to render the HTML content itself
 var innerContext = {
-    'locals' : { toc : tocSnippet },
+    'locals' : { toc : tocSnippet, 'title' : publication.title },
     'autoescape' : false,
 };
 
