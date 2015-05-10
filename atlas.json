@@ -1,16 +1,14 @@
 {
   "branch": "master",
   "files": [
-    "cover.html",
     "01-titlepage.html",
     "02-copyright.html",
     "03-toc.html",
     "04-preface.html",
-    "case-study-a-print-magazine-with-web-technologies.html",
     "case-study-reimagining-the-museum-catalogue.html",
+    "case-study-a-print-magazine-with-web-technologies.html",
     "case-study-theses-at-the-royal-academy.html",
     "extra-ethertoff-realtime-collaborative-web-design.html",
-    "extra-html-the-lingua-franca-in-web-design.html"
   ],
   "formats": {
     "pdf": {
