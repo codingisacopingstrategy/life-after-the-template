@@ -28,6 +28,15 @@ var innerContext = {
     'autoescape' : false,
 };
 
+app.get('/', function(req, res, next) {
+    if (!publication.files || !publication.files instanceof Array || publication.files.length === 0) {
+        next();
+        return;
+    }
+    firstPage = publication.files[0];
+    res.redirect('/' + firstPage);
+});
+
 app.get('/:fileslug.html', function (req, res, next) {
     // This route matches one of the files described in `atlas.json`
     var index = publication.files.indexOf(req.params.fileslug + '.html');
