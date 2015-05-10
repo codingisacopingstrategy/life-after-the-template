@@ -68,7 +68,7 @@ app.get('/:fileslug.html', function (req, res, next) {
 app.use(express.static(__dirname));
 
 app.use(function(req, res, next){
-    res.send(404, 'Sorry can not find that!');
+    res.status(404).send('Sorry can not find that!');
 });
 
 var server = app.listen(3000, function () {
