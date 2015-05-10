@@ -5,41 +5,63 @@ var express = require('express');
 var swig = require('swig');
 
 var app = express();
-var tpl = swig.compileFile('theme/html/layout.html', {autoescape: false});
+var outerTemplate = swig.compileFile('theme/html/layout.html', {autoescape: false});
 var publication = JSON.parse(fs.readFileSync('atlas.json').toString('utf-8'));
 
+// Render the Table of Contents as an HTML snippet
+var tocTpl = swig.compileFile('theme/html/partials/toc.html', {autoescape: false});
+var tocSnippet = tocTpl({ publication : publication.files });
 
-var context = function() {
+// Will create the necessary context for laying out the recurring parts of the layout
+var outerContext = function() {
     return {
         'doctype' : '<!DOCTYPE html>',
         'title' : publication.title,
-        'header': '<link rel="stylesheet" type="text/css" href="theme/html/html.css"/>',
+        'header' : '<link rel="stylesheet" type="text/css" href="theme/html/html.css"/>',
+        'toc_link' : '<a href="03-toc.html">Contents</a>',
     };
 };
 
-app.get('/:fileslug.html', function (req, res, next) {
-    var prevSlug = null, nextSlug = null;
-    var htmlPath = path.resolve(req.params.fileslug + '.html');
-    var c = context();
+// This is the context necessary to render the HTML content itself
+var innerContext = {
+    'locals' : { toc : tocSnippet },
+    'autoescape' : false,
+};
 
+app.get('/:fileslug.html', function (req, res, next) {
+    // This route matches one of the files described in `atlas.json`
     var index = publication.files.indexOf(req.params.fileslug + '.html');
     if (index === -1) {
         next();
         return;
     }
-    if (index !== 0) {
-        prevSlug = publication.files[index - 1];
-    }
-    if (index !== publication.files.length -1) {
-        nextSlug = publication.files[index + 1];
-    }
+
+    var htmlPath = path.resolve(req.params.fileslug + '.html');
     fs.readFile(htmlPath, function (err, data) {
         if (err) throw err;
-        c.content = data;
+        // Start a new context: this will hold the variables
+        // needed to render the general template.
+        var c = outerContext();
+        // Because the atlas.json tells us the order if files,
+        // We find out where in the publication we are and
+        // then determine previous and next links
+        var prevSlug = null, nextSlug = null;
+        if (index !== 0) {
+            prevSlug = publication.files[index - 1];
+        }
+        if (index !== publication.files.length -1) {
+            nextSlug = publication.files[index + 1];
+        }
         c.prev_link = prevSlug ? '<a href="' + prevSlug + '">Previous</a>' : '';
         c.next_link = nextSlug ? '<a href="' + nextSlug + '">Next</a>' : '';
+        // The content is the data we read from the HTML file
+        // We need to process it as a template too, to fill in
+        // tags like {{ toc }}
+        var innerTemplate = data.toString('utf8');
+        c.content = swig.render(innerTemplate, innerContext);
+        // Finally, render the entire page and send it to client
         res.set('Content-Type', 'text/html');
-        res.send(tpl(c));
+        res.send(outerTemplate(c));
     });
 });
 
