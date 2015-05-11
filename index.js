@@ -18,7 +18,7 @@ var outerContext = function() {
         'doctype' : '<!DOCTYPE html>',
         'title' : publication.title,
         'header' : '<link rel="stylesheet" type="text/css" href="theme/html/html.css"/>',
-        'toc_link' : '<a href="03-toc.html">Contents</a>',
+        'toc_link' : '<a href="toc.html">Contents</a>',
     };
 };
 
