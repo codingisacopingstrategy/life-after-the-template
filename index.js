@@ -6,7 +6,7 @@ var swig = require('swig');
 
 var app = express();
 var outerTemplate = swig.compileFile(path.resolve(__dirname, 'theme/html/layout.html'), {autoescape: false});
-var publication = JSON.parse(fs.readFileSync('atlas.json').toString('utf-8'));
+var publication = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'atlas.json')).toString('utf-8'));
 
 // Render the Table of Contents as an HTML snippet
 var tocTpl = swig.compileFile(path.resolve(__dirname, 'theme/html/partials/toc.html'), {autoescape: false});
@@ -45,7 +45,7 @@ app.get('/:fileslug.html', function (req, res, next) {
         return;
     }
 
-    var htmlPath = path.resolve(req.params.fileslug + '.html');
+    var htmlPath = path.resolve(__dirname, req.params.fileslug + '.html');
     fs.readFile(htmlPath, function (err, data) {
         if (err) throw err;
         // Start a new context: this will hold the variables
