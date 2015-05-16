@@ -1,20 +1,40 @@
 <section data-type="chapter">
 <h1>Theses at the Royal Academy of Arts, The Hague</h1>
 
+<p>The Royal Academy of Arts in The Hague, The Netherlands runs a renowned Graphic Design Bachelor program.</p>
+
 <p>Students coded their own design. As part of the curriculum. The decision to use web standards HTML, JavaScript and CSS made development more simple as it removed a layer of choice.</p>
 
 <section data-type="sect1">
 <h1>The paradox of choice</h1>
 
-<p class="p1">The landscape of web technology is varied and ever changing. Creating an advanced web project might include choosing a server side programming language (Python, PHP, Node.js) that talks to a database of choice, and then constructing a user interface on top of a foundation of existing front-end ‘frameworks’ and ‘pre-processors’ . The amount of choices to make is staggering, and the complexities of such systems great. For the project at the KABK we have foregone these technologies, for a more simple, back to basic approach: writing HTML pages.</p>
+<p class="p1">The landscape of web technology is varied and ever changing. Creating an advanced web project might include choosing a server side programming language (Python, PHP, Node.js) that talks to a database of choice, then creating the visual and interaction design on top of a foundation of existing front-end ‘frameworks’ and ‘pre-processors’ . The amount of choices to make is staggering, and the complexities of such systems great. For the project at the KABK we have foregone these technologies, for a more simple, back to basic approach: writing HTML pages.</p>
 
-<p class="p1">The first web-sites were exactly this: ‘hand-crafted HTML’. many small sites were created as a series of HTML pages, with occasional updates (the person designing the site might then charge for each update!). This did not mean coding was necessary: tools like Adobe Dreamweaver provided a visual view and a code view. For clients, obviously, having a content management solution saves time and money. The downside is that a content management system requires shoehorning every page into templates: these early HTML pages offered much more freedom in this respect.</p>
+<p class="p1">The first web-sites were exactly this: ‘hand-crafted HTML’. many small sites were created as a series of HTML pages, with occasional updates (the person designing the site might then charge for each update!). This did not mean coding was necessary: tools like Adobe Dreamweaver provided a visual view and a code view. The democratisation of Content Management Systems like WordPress and Joomla changed the equation. In these systems, a general design is encoded into a template, and the contents for individual pages are stored in a database that is easily editable by the user.&nbsp;For clients this saves time and money. The downside is that a content management system requires shoehorning every page into templates: these early HTML pages offered much more freedom in this respect, as potentially every page could be modified and changed to the designer’s whims.</p>
+
+<p class="p1">An ideal system would undoubtly combine elements of both paradigms: easy customisation and user-friendly content management. But with the design students, we chose to go Back to the Future, and write websites like it ’s 1999: in HTML files. Here are the reasons:</p>
+
+<ul>
+	<li class="p1">The contents and design of the thesis are supposed to be intimately related. Traditional web systems HTML, CSS and JavaScript are the language of web design. To be able to directly edit the HTML of the pages instead of generating them through a system, gives the full control needed in this situation.</li>
+	<li class="p1">The thesis is one text, and not a very long text at that. The advantages of Content Management Systems become more apparent for longer texts.</li>
+	<li class="p1">Graphic designers can be expected to know the languages of the web. At least, in the programme at the KABK they are. So even if the editing of text files is not a very accessible method for the larger public, it is perfectly acceptable for the intended audience.</li>
+</ul>
+
+<p class="p1">&nbsp;</p>
 </section>
 
 <section data-type="sect1">
-<h1>Section Title</h1>
+<h1>Indexation, Syndication</h1>
 
-<p>Section content goes here</p>
+<p>The one major advantage of data-base driven Content Management Systems is that it is very easy to generate indexes. The same database from which a single page will be fetched, will just as happily generate a listing of pages, sorted and filtered as the designer demands. Because most CMS’s are dynamic, these indexes will be kept up to date automatically: every time the page is rendered, the indexes will be re-generated.</p>
+
+<p>To create indexes from a collection of HTML files is more involved: since there is no neat database model with fields like ‘title’, ‘author’, ‘publishing date’, one will need a way to discover these metadata from the HTML. Creating indexes by hand is one option, but this is error-prone and tedious.</p>
+
+<p>It becomes even more involved when the indexes themselves are part of the pages, like in the submenu of a publication that show links to other pages. If a collaborator on another page changes its title, or a new page gets added, this submenu should be updated in every page—again, tedious and error-prone.</p>
+
+<p>With the theses at the KABK we decided to tackle the first problem. The students did not create actual links in-between the various theses. But a general index of the theses was desirable.</p>
+
+<p>&nbsp;</p>
 </section>
 
 <section data-type="sect1">
@@ -41,7 +61,7 @@
 <section data-type="sect2">
 <h2>Maintainability &amp; costs</h2>
 
-<p class="p1">Like mentioned in the previous point, dynamic websites need to be kept up to date to stay secure. This requires an amount of work that is non-negligable. A static website, one can essentially forget about: as long as the hosting bills are being paid, it should be able to continue functioning.</p>
+<p class="p1">Like mentioned in the previous point, dynamic websites need to be kept up to date to stay secure. This requires an amount of work that is non-negligible. A static website, one can essentially forget about: as long as the hosting bills are being paid, it should be able to continue functioning.</p>
 
 <p class="p1">Dynamic websites use more complicated hosting setups. They might even require a system known as a ‘VPS’, a virtual private server that can be fully configured: these cost a substantial amount of time to keep running and are expensive. Static websites can be hosted on more simple infrastructures. The cheapest shared web host will support the necessary technology.&nbsp;</p>
 </section>
