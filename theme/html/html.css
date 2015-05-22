@@ -10,7 +10,8 @@ body {
   padding-top: 80px;
 }
 
-/* general blocks */
+/* ---------------------- general blocks ---------------------- */
+
 
 p, dd { /* general text styles */
   font-family: sans-serif;
@@ -88,7 +89,9 @@ section[data-type="titlepage"] p {
   text-indent: 0;
 }
 
-/* copyright page */
+
+/* ---------------------- copyright page ---------------------- */
+
 
 section[data-type="copyright-page"] {
   margin-top: 100px;
@@ -223,7 +226,8 @@ section[data-type="appendix"] {
   page-break-after: always;
 }
 
-/* preface, chapter, and appendix headings */
+
+/* ---------------------- headings ---------------------- */
 
 /* heading font is sans serif */
 
@@ -282,7 +286,7 @@ div[data-type="part"] > h1 {
   margin-bottom: 70px;
 }
 
-/* lists */
+/* ---------------------- lists ---------------------- */
 
 ul, ol { /* bulleted and numbered lists */
   margin: 10px 0 10px 0;
@@ -318,7 +322,7 @@ dd p {
   text-indent: 0;
 }
 
-/* tables */
+/* ---------------------- tables ---------------------- */
 
 table {
   margin-top: 30px;
@@ -370,7 +374,7 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code { /* allow c
   word-wrap: break-word;
 }
 
-/* figures */
+/* ---------------------- figures ---------------------- */
 
 figure { /* figure containers */
   margin-top: 30px;

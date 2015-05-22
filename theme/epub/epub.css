@@ -173,9 +173,9 @@ nav[data-type="toc"] li {
   font-family: sans-serif;
 }
 
-nav[data-type="toc"] li[data-type="chapter"], 
-nav[data-type="toc"] li[data-type="part"], 
-nav[data-type="toc"] li[data-type="appendix"] { 
+nav[data-type="toc"] li[data-type="chapter"],
+nav[data-type="toc"] li[data-type="part"],
+nav[data-type="toc"] li[data-type="appendix"] {
   font-size: 0.9em;
   line-height: 120%;
   margin-left: 0;
@@ -184,7 +184,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 
 /* entries for parts in the table of contents */
 
-nav[data-type="toc"] li[data-type="part"] { 
+nav[data-type="toc"] li[data-type="part"] {
   margin-top: 25px;
 }
 
@@ -201,18 +201,18 @@ nav[data-type="toc"] li[data-type="part"] ol {
 
 /* entries for chapters and appendixes in the table of contents */
 
-nav[data-type="toc"] li[data-type="chapter"] { 
+nav[data-type="toc"] li[data-type="chapter"] {
   margin-top: 20px;
 }
 
-nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
-nav[data-type="toc"] li[data-type="appendix"] { 
+nav[data-type="toc"] li[data-type="chapter"]:last-of-type,
+nav[data-type="toc"] li[data-type="appendix"] {
   margin-bottom: 20px;
 }
 
 /* entries for sub-sections */
 
-nav[data-type="toc"] li[data-type="chapter"] ol { 
+nav[data-type="toc"] li[data-type="chapter"] ol {
   font-family: sans-serif;
   font-size: 0.9em;
   line-height: 120%;
@@ -227,9 +227,9 @@ nav[data-type="toc"] li[data-type="chapter"] ol ol {
 
 /* front and backmatter in the table of contents */
 
-nav[data-type="toc"] li[data-type="preface"], 
-nav[data-type="toc"] li[data-type="foreword"], 
-nav[data-type="toc"] li[data-type="glossary"], 
+nav[data-type="toc"] li[data-type="preface"],
+nav[data-type="toc"] li[data-type="foreword"],
+nav[data-type="toc"] li[data-type="glossary"],
 nav[data-type="toc"] li[data-type="index"] {
   font-size: 0.9em;
   line-height: 120%;
@@ -242,9 +242,9 @@ nav[data-type="toc"] li[data-type="foreword"] ol {
 
 /* page breaks after all chapter-level sections */
 
-section[data-type="preface"], 
-div[data-type="part"], 
-section[data-type="chapter"], 
+section[data-type="preface"],
+div[data-type="part"],
+section[data-type="chapter"],
 section[data-type="appendix"] {
   page-break-after: always; 
 }
@@ -254,11 +254,11 @@ section[data-type="appendix"] {
 
 /* heading font is sans serif */
 
-nav[data-type="toc"] > h1, 
-div[data-type="part"] > h1, 
-section[data-type="preface"] > h1, 
-section[data-type="chapter"] > h1, 
-section[data-type="appendix"] > h1, 
+nav[data-type="toc"] > h1,
+div[data-type="part"] > h1,
+section[data-type="preface"] > h1,
+section[data-type="chapter"] > h1,
+section[data-type="appendix"] > h1,
 section[data-type="sect1"] h1,
 section[data-type="bibliography"] h1,
 section[data-type="glossary"] h1 {
@@ -276,8 +276,8 @@ section[data-type="sect3"] h3 {
 }
 
 /* shared styles for all chapter-level headings */
-section[data-type="preface"] > h1, 
-section[data-type="chapter"] > h1, 
+section[data-type="preface"] > h1,
+section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1,
 div.chapter > h1 {
   font-size: 2em;
