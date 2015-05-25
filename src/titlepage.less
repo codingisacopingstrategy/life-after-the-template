@@ -1,0 +1,53 @@
+/* frontmatter */
+
+section[data-type="titlepage"] h1 {
+  font-family: serif;
+}
+
+section[data-type="titlepage"] h2,
+section[data-type="copyright-page"] h1 {
+  font-family: sans-serif;
+}
+
+section[data-type="halftitlepage"] {
+  display: none;
+}
+
+section[data-type="titlepage"] {
+  text-align: left;
+  page-break-after: always;
+}
+
+section[data-type="titlepage"] h1 {
+  border-bottom: 1px solid #333;
+  margin-top: 100px;
+  padding-bottom: 10px;
+}
+
+section[data-type="titlepage"] h1 {
+  font-size: 2em;
+  line-height: 120%;
+}
+
+section[data-type="titlepage"] h2 {
+  font-size: 1.2em;
+  line-height: 120%;
+  margin-top: 20px;
+}
+
+/* styling and positioning for author names and other text */
+
+section[data-type="titlepage"] p:first-of-type {
+  margin-top: 82pt;
+}
+
+section[data-type="titlepage"] p {
+  font-family: sans-serif;
+  font-size: 13pt;
+  line-height: 16pt;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+  float: none;
+  text-indent: 0;
+}
+

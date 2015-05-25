@@ -1,0 +1,86 @@
+@fontsize: 1em;
+@fontsizelarger: 1.1em;
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+/* ---------------------- general blocks ---------------------- */
+
+
+p, dd { /* general text styles */
+  font-family: sans-serif;
+  text-indent: 20px;
+  font-size: @fontsize;
+  line-height: 125%;
+}
+
+section[data-type="preface"] > h1 + p,
+div[data-type="part"] > h1 + p,
+section[data-type="chapter"] > h1 + p,
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
+section[data-type="sect2"] > h2 + p,
+section[data-type="sect3"] > h3 + p {
+  text-indent: 0px; /* first paragraph following a heading has no indent */
+}
+
+/* general inlines */
+
+p a {
+  display: inline;
+}
+
+@import "../titlepage";
+
+@import "../copyright_page";
+
+@import "../toc";
+
+@import "../styles";
+
+/* website nav element */
+
+div.navbar {
+  font-family: sans-serif;
+  background-color: #E8E8E8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+div.navbar h1 {
+  float: left;
+  font-size: @fontsize;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #999;
+}
+
+div.navbar p {
+  float: right;
+  font-size: @fontsize;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div.navbar p a {
+  text-decoration: none;
+  color: #999;
+}
+
+@import "responsive";

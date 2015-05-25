@@ -1,0 +1,97 @@
+/* ---------------------- table of contents ---------------------- */
+
+/* global styles for the table of contents */
+/* table of contents is a series of nested lists in a nav element */
+
+nav[data-type="toc"] a { /* all table of contents entries are also links */
+  font-style: normal;
+}
+
+nav[data-type="toc"] li { /* no list marker on table of contents entries */
+  list-style-type: none;
+}
+
+nav[data-type="toc"] > h1 { /* table of contents heading */
+  font-size: 1.5em;
+  line-height: 120%;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* defining fonts for the table of contents */
+
+nav[data-type="toc"] a {
+  text-decoration: none;
+}
+
+nav[data-type="toc"] li {
+  font-family: sans-serif;
+}
+
+nav[data-type="toc"] li[data-type="chapter"],
+nav[data-type="toc"] li[data-type="part"],
+nav[data-type="toc"] li[data-type="appendix"] {
+  font-size: @fontsize;
+  line-height: 120%;
+  margin-left: 0;
+  text-indent: 0;
+}
+
+/* entries for parts in the table of contents */
+
+nav[data-type="toc"] li[data-type="part"] {
+  margin-top: 25px;
+}
+
+nav[data-type="toc"] li[data-type="part"] > a {
+  border-bottom: 1px solid #333;
+  width: 100%;
+  display: inline-block;
+}
+
+nav[data-type="toc"] li[data-type="part"] ol {
+  margin-left: 0;
+  text-indent: 0;
+}
+
+/* entries for chapters and appendixes in the table of contents */
+
+nav[data-type="toc"] li[data-type="chapter"] {
+  margin-top: 20px;
+}
+
+nav[data-type="toc"] li[data-type="chapter"]:last-of-type,
+nav[data-type="toc"] li[data-type="appendix"] {
+  margin-bottom: 20px;
+}
+
+/* entries for sub-sections */
+
+nav[data-type="toc"] li[data-type="chapter"] ol {
+  font-family: sans-serif;
+  font-size: @fontsize;
+  line-height: 120%;
+  margin-left: 20px;
+  text-indent: -10px;
+}
+
+nav[data-type="toc"] li[data-type="chapter"] ol ol {
+  margin-left: 10px;
+  text-indent: -10px;
+}
+
+/* front and backmatter in the table of contents */
+
+nav[data-type="toc"] li[data-type="preface"],
+nav[data-type="toc"] li[data-type="foreword"],
+nav[data-type="toc"] li[data-type="glossary"],
+nav[data-type="toc"] li[data-type="index"] {
+  font-size: @fontsize;
+  line-height: 120%;
+}
+
+nav[data-type="toc"] li[data-type="preface"] ol,
+nav[data-type="toc"] li[data-type="foreword"] ol {
+  display: none;
+}
