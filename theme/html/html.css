@@ -119,7 +119,7 @@ section[data-type="dedication"] {
   padding-top: 100px;
 }
 
-/* table of contents */
+/* ---------------------- table of contents ---------------------- */
 
 /* global styles for the table of contents */
 /* table of contents is a series of nested lists in a nav element */
@@ -400,16 +400,16 @@ figcaption {
   display: block;
 }
 
-/* sidebars */
+/* ---------------------- sidebars ---------------------- */
 
-aside { /* sidebar containers */
+aside, div.sidebar { /* sidebar containers */
   background-color: #d8d8d8;
   border: 1px solid #d8d8d8;
   padding: 20px 20px 10px 20px;
   margin: 30px 0 30px 0;
 }
 
-aside h5 { /* sidebar titles */
+aside h5, div.sidebar h5 { /* sidebar titles */
   font-family: sans-serif;
   font-size: 1em;
   line-height: 120%;
@@ -418,14 +418,14 @@ aside h5 { /* sidebar titles */
   padding: 0;
 }
 
-aside h6 { /* sidebar subtitles */
+aside h6, div.sidebar h6 { /* sidebar subtitles */
   font-family: sans-serif;
   font-weight: bold;
   font-size: 0.9em;
   line-height: 120%;
 }
 
-aside p { /* sidebar text */
+aside p, div.sidebar p { /* sidebar text */
   font-family: serif;
   font-size: 1em;
   line-height: 130%;
@@ -433,10 +433,13 @@ aside p { /* sidebar text */
   margin-top: 6px;
 }
 
-/* admonitions */
+/* ---------------------- admonitions ---------------------- */
 
 div[data-type="note"],
-div[data-type="warning"] { /* admonition containers */
+div[data-type="warning"],
+div[data-type="tip"],
+div[data-type="caution"],
+div[data-type="important"] { /* admonition containers */
   border-top: 2px solid #888;
   border-bottom: 1px solid #d8d8d8;
   padding: 10px 0;
@@ -445,7 +448,10 @@ div[data-type="warning"] { /* admonition containers */
 }
 
 div[data-type="note"] h1,
-div[data-type="warning"] h1 { /* admonition titles */
+div[data-type="warning"] h1,
+div[data-type="tip"] h1,
+div[data-type="caution"] h1,
+div[data-type="important"] h1 { /* admonition titles */
   color: #000;
   font-family: sans-serif;
   font-weight: bold;
@@ -457,14 +463,17 @@ div[data-type="warning"] h1 { /* admonition titles */
 }
 
 div[data-type="note"] p,
-div[data-type="warning"] p { /* admonition text */
+div[data-type="warning"] p,
+div[data-type="tip"] p,
+div[data-type="caution"] p,
+div[data-type="important"] p { /* admonition text */
   font-family: serif;
   font-size: 1em;
   line-height: 120%;
   text-indent: 0in;
 }
 
-/* code */
+/* ---------------------- code ---------------------- */
 
 pre, code { /* monospace font for both code blocks and inline code */
   font-family: monospace;
@@ -503,7 +512,7 @@ div[data-type="example"] h5 { /* titles for formal code examples */
   margin-top: 30px;
 }
 
-/* blockquote */
+/* ---------------------- blockquotes ---------------------- */
 
 blockquote {
   font-family: sans-serif;
