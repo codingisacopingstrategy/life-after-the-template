@@ -8,6 +8,12 @@ body {
   margin: 0 auto;
   padding-top: 80px;
 }
+a,
+a:link,
+a:visited,
+a:active {
+  color: #999;
+}
 /* ---------------------- general blocks ---------------------- */
 p,
 dd {
@@ -473,7 +479,7 @@ blockquote p {
 /* website nav element */
 div.navbar {
   font-family: sans-serif;
-  background-color: #E8E8E8;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -532,4 +538,25 @@ div.navbar p a {
     float: none;
     text-indent: 0;
   }
+}
+/* prev/next */
+div.navigation {
+  font-family: sans-serif;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 20px 0 20px;
+  border-top: 1px solid #d8d8d8;
+}
+div.navigation > ul {
+  list-style: none;
+  text-align: center;
+}
+div.navigation > ul li {
+  display: inline;
+}
+div.navigation > ul li:first-child {
+  float: right;
+}
+div.navigation > ul li:nth-child(3) {
+  float: left;
 }
