@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Charis SIL';
+  font-weight: normal;
+  font-style: normal;
+  src: url('html/fonts/charissil-r-webfont.eot');
+  src: url('html/fonts/charissil-r-webfont.eot?iefix') format('embedded-opentype'), url('html/fonts/charissil-r-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Charis SIL';
+  font-weight: bold;
+  font-style: normal;
+  src: url('html/fonts/charissil-b-webfont.eot');
+  src: url('html/fonts/charissil-b-webfont.eot?iefix') format('embedded-opentype'), url('html/fonts/charissil-b-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Charis SIL';
+  font-weight: normal;
+  font-style: italic;
+  src: url('html/fonts/charissil-i-webfont.eot');
+  src: url('html/fonts/charissil-i-webfont.eot?iefix') format('embedded-opentype'), url('html/fonts/charissil-i-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Charis SIL';
+  font-weight: bold;
+  font-style: italic;
+  src: url('html/fonts/charissil-bi-webfont.eot');
+  src: url('html/fonts/charissil-bi-webfont.eot?iefix') format('embedded-opentype'), url('html/fonts/charissil-bi-webfont.ttf') format('truetype');
+}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,7 +46,7 @@ a:active {
 p,
 dd {
   /* general text styles */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   text-indent: 20px;
   font-size: 1em;
   line-height: 125%;
@@ -39,11 +67,11 @@ p a {
 }
 /* frontmatter */
 section[data-type="titlepage"] h1 {
-  font-family: serif;
+  font-family: 'Charis SIL';
 }
 section[data-type="titlepage"] h2,
 section[data-type="copyright-page"] h1 {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
 }
 section[data-type="halftitlepage"] {
   display: none;
@@ -71,7 +99,7 @@ section[data-type="titlepage"] p:first-of-type {
   margin-top: 82pt;
 }
 section[data-type="titlepage"] p {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 13pt;
   line-height: 16pt;
   margin-top: 0pt;
@@ -88,14 +116,14 @@ section[data-type="copyright-page"] h1 {
   font-size: 0.8em;
 }
 section[data-type="copyright-page"] p {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.8em;
   margin: 0;
   text-indent: 0;
 }
 /* dedication */
 section[data-type="dedication"] {
-  font-family: serif;
+  font-family: 'Charis SIL';
   font-style: italic;
   page-break-after: always;
   text-align: center;
@@ -125,7 +153,7 @@ nav[data-type="toc"] a {
   text-decoration: none;
 }
 nav[data-type="toc"] li {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
 }
 nav[data-type="toc"] li[data-type="chapter"],
 nav[data-type="toc"] li[data-type="part"],
@@ -158,7 +186,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 }
 /* entries for sub-sections */
 nav[data-type="toc"] li[data-type="chapter"] ol {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 1em;
   line-height: 120%;
   margin-left: 20px;
@@ -195,12 +223,12 @@ section[data-type="preface"] > h1,
 section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1,
 section[data-type="sect1"] h1 {
-  font-family: serif;
+  font-family: 'Charis SIL';
   line-height: 120%;
 }
 section[data-type="sect2"] h2,
 section[data-type="sect3"] h3 {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   line-height: 120%;
 }
 /* shared styles for all chapter-level headings */
@@ -248,7 +276,7 @@ ul li,
 ol li,
 ul li p,
 ol li p {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 1em;
   line-height: 120%;
   margin-top: 5px;
@@ -260,7 +288,7 @@ dl {
 }
 dt {
   /* definition list terms */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.9em;
   line-height: 120%;
   margin-top: 15px;
@@ -282,7 +310,7 @@ table {
   border-collapse: collapse;
 }
 table caption {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.8em;
   line-height: 120%;
   text-align: left;
@@ -294,7 +322,7 @@ tr {
 }
 th {
   /* table heading rows */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.8em;
   line-height: 120%;
   text-align: left;
@@ -309,7 +337,7 @@ td {
 td,
 table p {
   /* table body text */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 12px;
   line-height: 120%;
 }
@@ -362,7 +390,7 @@ div.sidebar {
 aside h5,
 div.sidebar h5 {
   /* sidebar titles */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 1em;
   line-height: 120%;
   text-align: center;
@@ -372,7 +400,7 @@ div.sidebar h5 {
 aside h6,
 div.sidebar h6 {
   /* sidebar subtitles */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-weight: bold;
   font-size: 0.9em;
   line-height: 120%;
@@ -380,7 +408,7 @@ div.sidebar h6 {
 aside p,
 div.sidebar p {
   /* sidebar text */
-  font-family: serif;
+  font-family: 'Charis SIL';
   font-size: 1em;
   line-height: 130%;
   text-indent: 0;
@@ -407,7 +435,7 @@ div[data-type="caution"] h1,
 div[data-type="important"] h1 {
   /* admonition titles */
   color: #000;
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-weight: bold;
   font-size: 0.8em;
   text-transform: uppercase;
@@ -421,7 +449,7 @@ div[data-type="tip"] p,
 div[data-type="caution"] p,
 div[data-type="important"] p {
   /* admonition text */
-  font-family: serif;
+  font-family: 'Charis SIL';
   font-size: 1em;
   line-height: 120%;
   text-indent: 0in;
@@ -458,7 +486,7 @@ table code {
 }
 div[data-type="example"] h5 {
   /* titles for formal code examples */
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.8em;
   line-height: 120%;
   border-bottom: 1px solid #d8d8d8;
@@ -467,7 +495,7 @@ div[data-type="example"] h5 {
 }
 /* ---------------------- blockquotes ---------------------- */
 blockquote {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   font-size: 0.9em;
   line-height: 130%;
   margin-left: 30px;
@@ -478,7 +506,7 @@ blockquote p {
 }
 /* website nav element */
 div.navbar {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -501,7 +529,7 @@ div.navbar p {
   font-weight: normal;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
 }
 div.navbar p a,
 div.navbar h1 a {
@@ -542,7 +570,7 @@ div.navbar h1 a {
 }
 /* prev/next */
 div.navigation {
-  font-family: sans-serif;
+  font-family: 'Charis SIL';
   background-color: #fff;
   width: 100%;
   padding: 10px 20px 0 20px;
