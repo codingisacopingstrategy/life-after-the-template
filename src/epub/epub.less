@@ -1,5 +1,7 @@
 @fontsize: 0.9em;
 @fontsizelarger: 1em;
+@sans-serif: sans-serif;
+@serif: serif;
 
 /* O'Reilly Media, 2014; version 4.0.0 */
 
@@ -9,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
 dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub,
 sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
-label, legend, table, caption, tbody, tfoot, thead, tr, th, td { 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,21 +26,21 @@ label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 
 
 p, dd { /* general text styles */
-  font-family: sans-serif;
+  font-family: @sans-serif;
   text-indent: 20px;
   font-size: 0.9em;
   line-height: 125%;
 }
 
-section[data-type="preface"] > h1 + p, 
-div[data-type="part"] > h1 + p, 
+section[data-type="preface"] > h1 + p,
+div[data-type="part"] > h1 + p,
 section[data-type="chapter"] > h1 + p,
 div[data-type="chapter"] > h1 + p
-section[data-type="chapter"] > h1 + div.author p, 
-section[data-type="sect1"] > h1 + p, 
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
 section[data-type="sect2"] > h2 + p,
 section[data-type="sect3"] > h3 + p,
-p { 
+p {
   text-indent: 0px; /* first paragraph following a heading has no indent */
 }
 
@@ -95,7 +97,7 @@ div.chapter > h1 {
   adobe-hyphenate: none;
 }
 
-div.chapter > h1 > span.label { 
+div.chapter > h1 > span.label {
   width: 100%;
   display: block;
 }
@@ -108,9 +110,9 @@ section[data-type="sect2"] h2 { /* B-level headings */
   font-size: 1.25em;
 }
 
-ul, ol { 
+ul, ol {
     margin: 0.25em 0 1em 15px;
-    padding: 0 0 0 -10px; 
+    padding: 0 0 0 -10px;
     list-style-position: outside;
     text-indent: 0;
 }
@@ -132,7 +134,7 @@ table caption span.label {
   font-weight: bold;
 }
 
-div[data-type="note"], 
+div[data-type="note"],
 div[data-type="warning"],
 div[data-type="tip"],
 div[data-type="caution"],
@@ -145,7 +147,7 @@ div[data-type="important"] { /* admonition containers */
   text-align: justify;
 }
 
-div[data-type="note"] p, 
+div[data-type="note"] p,
 div[data-type="warning"] p,
 div[data-type="tip"] p,
 div[data-type="caution"] p,
@@ -180,9 +182,9 @@ div[data-type="example"] h5 { /* titles for formal code examples */
   font-style: italic;
 }
 
-div[data-type="example"] h5 span.label { 
+div[data-type="example"] h5 span.label {
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: @sans-serif;
   font-style: normal;
 }
 
@@ -226,13 +228,13 @@ section[data-type="appendix"] section[data-type="sect1"] h1 {
     padding:0px;
 }
 
-section[data-type="appendix"] section[data-type="sect1"] dl { 
+section[data-type="appendix"] section[data-type="sect1"] dl {
     font-size: 90%;
     clear: both;
      padding:0px;
-}   
+}
 
-section[data-type="appendix"] section[data-type="sect1"] dt a { 
+section[data-type="appendix"] section[data-type="sect1"] dt a {
  margin-top: -5px;
  padding:0px;}
 

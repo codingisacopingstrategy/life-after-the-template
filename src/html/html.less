@@ -1,5 +1,7 @@
 @fontsize: 1em;
 @fontsizelarger: 1.1em;
+@sans-serif: sans-serif;
+@serif: serif;
 
 * {
   -moz-box-sizing: border-box;
@@ -21,7 +23,7 @@ a, a:link, a:visited, a:active {
 
 
 p, dd { /* general text styles */
-  font-family: sans-serif;
+  font-family: @sans-serif;
   text-indent: 20px;
   font-size: @fontsize;
   line-height: 125%;
@@ -54,7 +56,7 @@ p a {
 /* website nav element */
 
 div.navbar {
-  font-family: sans-serif;
+  font-family: @sans-serif;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -79,7 +81,7 @@ div.navbar p {
   font-weight: normal;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: @sans-serif;
 }
 
 div.navbar p a {
@@ -92,7 +94,7 @@ div.navbar p a {
 /* prev/next */
 
 div.navigation {
-  font-family: sans-serif;
+  font-family: @sans-serif;
   background-color: #fff;
   width: 100%;
   padding: 10px 20px 0 20px;
@@ -102,7 +104,7 @@ div.navigation {
 div.navigation > ul {
   list-style: none;
   text-align: center;
-  
+
   li {
     display: inline;
   }
