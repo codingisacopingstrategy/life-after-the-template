@@ -503,7 +503,8 @@ div.navbar p {
   margin: 0;
   font-family: sans-serif;
 }
-div.navbar p a {
+div.navbar p a,
+div.navbar h1 a {
   text-decoration: none;
   color: #999;
 }
