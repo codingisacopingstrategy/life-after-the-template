@@ -96,13 +96,6 @@ p a {
   display: inline;
 }
 /* frontmatter */
-section[data-type="titlepage"] h1 {
-  font-family: serif;
-}
-section[data-type="titlepage"] h2,
-section[data-type="copyright-page"] h1 {
-  font-family: sans-serif;
-}
 section[data-type="halftitlepage"] {
   display: none;
 }
@@ -129,7 +122,6 @@ section[data-type="titlepage"] p:first-of-type {
   margin-top: 82pt;
 }
 section[data-type="titlepage"] p {
-  font-family: sans-serif;
   font-size: 13pt;
   line-height: 16pt;
   margin-top: 0pt;
@@ -252,8 +244,9 @@ div[data-type="part"] > h1,
 section[data-type="preface"] > h1,
 section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1,
-section[data-type="sect1"] h1 {
-  font-family: serif;
+section[data-type="sect1"] h1,
+section[data-type="titlepage"] h1 {
+  font-family: sans-serif;
   line-height: 120%;
 }
 section[data-type="sect2"] h2,
@@ -277,8 +270,10 @@ section[data-type="sect1"] h1 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-section[data-type="sect2"] h2 {
+section[data-type="sect2"] h2,
+section[data-type="titlepage"] h2 {
   /* B-level headings */
+  font-family: sans-serif;
   font-size: 1em;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -479,7 +474,7 @@ div[data-type="tip"] p,
 div[data-type="caution"] p,
 div[data-type="important"] p {
   /* admonition text */
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 1em;
   line-height: 120%;
   text-indent: 0in;
