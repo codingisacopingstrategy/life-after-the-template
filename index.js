@@ -4,13 +4,15 @@ var path = require('path');
 var express = require('express');
 var swig = require('swig');
 
+var toc = require('./toc');
+
 var app = express();
 var outerTemplate = swig.compileFile(path.resolve(__dirname, 'theme/html/layout.html'), {autoescape: false});
 var publication = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'atlas.json')).toString('utf-8'));
 
 // Render the Table of Contents as an HTML snippet
-var tocTpl = swig.compileFile(path.resolve(__dirname, 'theme/html/partials/toc.html'), {autoescape: false});
-var tocSnippet = tocTpl({ publication : publication.files });
+var tocTpl = swig.compile(toc());
+var tocSnippet = tocTpl({ title : publication.title });
 
 // Will create the necessary context for laying out the recurring parts of the layout
 var outerContext = function() {
