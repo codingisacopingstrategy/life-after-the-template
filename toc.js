@@ -1,5 +1,6 @@
 var slug = require('slug');
 var $ = require('cheerio');
+var htmlparser = require('cheerio/node_modules/htmlparser2');
 var fs = require('fs');
 var path = require('path');
 
@@ -64,6 +65,43 @@ var generateToc = function(level, $el, fileName) {
     }
     return $li;
 };
+
+var setIDs = function(level, $el) {
+    var header = $el.children(level.selectorTitle).first();
+    var title = header.text();
+    var headerSlug = slug(title, {lower: true});
+    header.attr('id', headerSlug);
+    if (level.nextLevel) {
+        $children = $el.children("[data-type=" + level.nextLevel + "]");
+        $children.each(function(i, el) {
+            setIDs(levels[level.nextLevel], $(el));
+        });
+    }
+}
+
+if (require.main === module) {
+    var publication = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'atlas.json')).toString('utf-8'));
+    publication.files.forEach(function (f, i) {
+        var filePath = path.resolve(__dirname, f);
+        var htmlString = fs.readFileSync(filePath, 'utf8');
+        //console.log(htmlString);
+        var $doc = $.load( '<html>' + htmlString + '</html>', {
+            normalizeWhitespace: false,
+            xmlMode: true,
+            decodeEntities: false
+        });
+        console.log($doc._options);
+        var $el = $doc('html').children().first();
+        if ($el.length === 0) return;
+        setIDs(levels.chapter, $el);
+        // we serialise with htmlparser because it allows us to set serialisation options
+        fs.writeFile(filePath, htmlparser.DomUtils.getOuterHTML($el[0], { xmlMode: true}) + '\n', function(err) {
+            if (err) throw err;
+        });
+    });
+    
+}
+
 
 /***
 The function that can be used from node.js to generate the toc
