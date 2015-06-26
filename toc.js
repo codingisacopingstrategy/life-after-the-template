@@ -84,13 +84,11 @@ if (require.main === module) {
     publication.files.forEach(function (f, i) {
         var filePath = path.resolve(__dirname, f);
         var htmlString = fs.readFileSync(filePath, 'utf8');
-        //console.log(htmlString);
         var $doc = $.load( '<html>' + htmlString + '</html>', {
             normalizeWhitespace: false,
             xmlMode: true,
             decodeEntities: false
         });
-        console.log($doc._options);
         var $el = $doc('html').children().first();
         if ($el.length === 0) return;
         setIDs(levels.chapter, $el);
