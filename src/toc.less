@@ -9,6 +9,7 @@ nav[data-type="toc"] a { /* all table of contents entries are also links */
 
 nav[data-type="toc"] li { /* no list marker on table of contents entries */
   list-style-type: none;
+  font-family: @sans-serif;
 }
 
 nav[data-type="toc"] > h1 { /* table of contents heading */
@@ -23,10 +24,11 @@ nav[data-type="toc"] > h1 { /* table of contents heading */
 
 nav[data-type="toc"] a {
   text-decoration: none;
-}
-
-nav[data-type="toc"] li {
-  font-family: @sans-serif;
+  border: 0;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid blue;
+  padding: 12px 0px 0px 12px;
+  margin: 0;
 }
 
 nav[data-type="toc"] li[data-type="chapter"],

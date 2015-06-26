@@ -1,6 +1,6 @@
-@fontsize: 1em;
-@fontsizelarger: 1.1em;
-@heading-sans-serif: 'Montserrat';
+@fontsize: 1.3em;
+@fontsizelarger: 1.5em;
+@heading-sans-serif: 'CothamSans';
 @sans-serif: 'CothamSans';
 @serif: 'Charis SIL';
 
@@ -17,10 +17,19 @@ body {
   max-width: 700px;
   margin: 0 auto;
   padding-top: 80px;
+  border-left: 1px dashed blue;
+  border-right: 1px dashed blue;
 }
 
 a, a:link, a:visited, a:active {
-  color: #999;
+  color: black;
+  border: 1px solid blue;
+  text-decoration: none;
+  padding: 2px 2px 0px 2px;
+}
+a:hover {
+  background-color: blue;
+  color: white;
 }
 
 /* ---------------------- general blocks ---------------------- */
@@ -28,7 +37,7 @@ a, a:link, a:visited, a:active {
 
 p, dd { /* general text styles */
   font-family: @sans-serif;
-  text-indent: 20px;
+  text-indent: 30px;
   font-size: @fontsize;
   line-height: 125%;
 }
@@ -41,6 +50,10 @@ section[data-type="sect1"] > h1 + p,
 section[data-type="sect2"] > h2 + p,
 section[data-type="sect3"] > h3 + p {
   text-indent: 0px; /* first paragraph following a heading has no indent */
+}
+section h2 {
+    font-family: @sans-serif;
+    font-weight: normal;
 }
 
 /* general inlines */
@@ -67,12 +80,12 @@ div.navbar {
   left: 0;
   width: 100%;
   padding: 10px 20px 10px 20px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px dashed blue;
 }
 
 div.navbar h1 {
   float: left;
-  font-size: @fontsize;
+  font-size: 1.1em;
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -81,7 +94,7 @@ div.navbar h1 {
 
 div.navbar p {
   float: right;
-  font-size: @fontsize;
+  font-size: 1.1em;
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -90,7 +103,6 @@ div.navbar p {
 
 div.navbar p a, div.navbar h1 a {
   text-decoration: none;
-  color: #999;
 }
 
 @import "responsive";
@@ -99,23 +111,29 @@ div.navbar p a, div.navbar h1 a {
 
 div.navigation {
   font-family: @sans-serif;
+  font-size: 1.1em;
   background-color: #fff;
   width: 100%;
-  padding: 10px 20px 0 20px;
-  border-top: 1px solid #d8d8d8;
+  padding: 8px 20px 0 20px;
+  margin: 30px 0px;
+  border-top: 1px dashed blue;
+  border-bottom: 1px dashed blue;
 }
 
 div.navigation > ul {
   list-style: none;
   text-align: center;
+  padding-left: 0;
 
   li {
     display: inline;
   }
   li:first-child {
     float: right;
+    margin-top: 0px;
   }
   li:nth-child(3) {
     float: left;
+    margin-top: 0px;
   }
 }
