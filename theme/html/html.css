@@ -412,7 +412,8 @@ figure {
   display: block;
   page-break-inside: avoid;
 }
-figure img {
+figure img,
+figure video {
   /* figure images */
   border-top: 1px solid blue;
   border-bottom: 1px solid blue;
