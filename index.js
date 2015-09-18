@@ -19,7 +19,7 @@ var outerContext = function() {
     return {
         'doctype' : '<!DOCTYPE html>',
         'title' : publication.title,
-        'header' : '<link rel="stylesheet" type="text/css" href="theme/html/html.css"/>',
+        'header' : '<link rel="stylesheet" type="text/css" media="screen" href="theme/html/html.css"/><link rel="stylesheet" type="text/css" media="print" href="theme/pdf/pdf_print.css"/>',
         'toc_link' : '<a href="toc.html">Contents</a>',
     };
 };
