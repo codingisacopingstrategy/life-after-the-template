@@ -2,65 +2,65 @@
   font-family: 'Charis SIL';
   font-weight: normal;
   font-style: normal;
-  src: url('fonts/charissil-r-webfont.eot');
-  src: url('fonts/charissil-r-webfont.eot?iefix') format('embedded-opentype'), url('fonts/charissil-r-webfont.ttf') format('truetype');
+  src: url('../fonts/charissil-r-webfont.eot');
+  src: url('../fonts/charissil-r-webfont.eot?iefix') format('embedded-opentype'), url('../fonts/charissil-r-webfont.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Charis SIL';
   font-weight: bold;
   font-style: normal;
-  src: url('fonts/charissil-b-webfont.eot');
-  src: url('fonts/charissil-b-webfont.eot?iefix') format('embedded-opentype'), url('fonts/charissil-b-webfont.ttf') format('truetype');
+  src: url('../fonts/charissil-b-webfont.eot');
+  src: url('../fonts/charissil-b-webfont.eot?iefix') format('embedded-opentype'), url('../fonts/charissil-b-webfont.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Charis SIL';
   font-weight: normal;
   font-style: italic;
-  src: url('fonts/charissil-i-webfont.eot');
-  src: url('fonts/charissil-i-webfont.eot?iefix') format('embedded-opentype'), url('fonts/charissil-i-webfont.ttf') format('truetype');
+  src: url('../fonts/charissil-i-webfont.eot');
+  src: url('../fonts/charissil-i-webfont.eot?iefix') format('embedded-opentype'), url('../fonts/charissil-i-webfont.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Charis SIL';
   font-weight: bold;
   font-style: italic;
-  src: url('fonts/charissil-bi-webfont.eot');
-  src: url('fonts/charissil-bi-webfont.eot?iefix') format('embedded-opentype'), url('fonts/charissil-bi-webfont.ttf') format('truetype');
+  src: url('../fonts/charissil-bi-webfont.eot');
+  src: url('../fonts/charissil-bi-webfont.eot?iefix') format('embedded-opentype'), url('../fonts/charissil-bi-webfont.ttf') format('truetype');
 }
 @font-face {
   font-family: 'CothamSans';
   font-weight: normal;
   font-style: normal;
-  src: url('fonts/CothamSans.otf');
+  src: url('../fonts/CothamSans.otf');
 }
 @font-face {
   font-family: 'Montserrat';
   font-weight: 100;
   font-style: normal;
-  src: url('fonts/Montserrat-Hairline.otf');
+  src: url('../fonts/Montserrat-Hairline.otf');
 }
 @font-face {
   font-family: 'Montserrat';
   font-weight: 300;
   font-style: normal;
-  src: url('fonts/Montserrat-Light.otf');
+  src: url('../fonts/Montserrat-Light.otf');
 }
 @font-face {
   font-family: 'Montserrat';
   font-weight: 400;
   font-style: normal;
-  src: url('fonts/Montserrat-Regular.otf');
+  src: url('../fonts/Montserrat-Regular.otf');
 }
 @font-face {
   font-family: 'Montserrat';
   font-weight: 700;
   font-style: normal;
-  src: url('fonts/Montserrat-Bold.otf');
+  src: url('../fonts/Montserrat-Bold.otf');
 }
 @font-face {
   font-family: 'Montserrat';
   font-weight: 900;
   font-style: normal;
-  src: url('fonts/Montserrat-Black.otf');
+  src: url('../fonts/Montserrat-Black.otf');
 }
 * {
   -moz-box-sizing: border-box;
@@ -88,28 +88,6 @@ a:hover {
   color: white;
 }
 /* ---------------------- general blocks ---------------------- */
-p,
-dd {
-  /* general text styles */
-  font-family: 'CothamSans';
-  text-indent: 30px;
-  font-size: 1.3em;
-  line-height: 125%;
-}
-section[data-type="preface"] > h1 + p,
-div[data-type="part"] > h1 + p,
-section[data-type="chapter"] > h1 + p,
-section[data-type="chapter"] > h1 + div.author p,
-section[data-type="sect1"] > h1 + p,
-section[data-type="sect2"] > h2 + p,
-section[data-type="sect3"] > h3 + p {
-  text-indent: 0px;
-  /* first paragraph following a heading has no indent */
-}
-section h2 {
-  font-family: 'CothamSans';
-  font-weight: normal;
-}
 /* general inlines */
 p a {
   display: inline;
@@ -255,6 +233,41 @@ nav[data-type="toc"] li[data-type="preface"] ol,
 nav[data-type="toc"] li[data-type="foreword"] ol {
   display: none;
 }
+/* -------------------------------------------------------------- */
+/* ------------------------ General Blocks ---------------------- */
+/* -------------------------------------------------------------- */
+li > p,
+dd p,
+section[data-type="titlepage"] p,
+section[data-type="copyright-page"] p,
+p[data-type="author"],
+p.author,
+section[data-type="preface"] > h1 + p,
+section[data-type="foreword"] > h1 + p,
+div[data-type="part"] > h1 + p,
+section[data-type="chapter"] > h1 + p,
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
+section[data-type="sect2"] > h2 + p,
+section[data-type="sect3"] > h3 + p,
+h1 + p,
+h2 + p,
+h3 + p {
+  text-indent: 0;
+  /* first paragraph following a heading has no indent */
+}
+p,
+dd {
+  /* general text styles */
+  font-family: 'CothamSans';
+  text-indent: 30px;
+  font-size: 1.3em;
+  line-height: 125%;
+}
+section h2 {
+  font-family: 'CothamSans';
+  font-weight: normal;
+}
 /* page breaks after all chapter-level sections */
 section[data-type="preface"],
 div[data-type="part"],
@@ -367,7 +380,7 @@ dd p {
 table {
   margin-top: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #d8d8d8;
   border-collapse: collapse;
 }
 table caption {
@@ -388,8 +401,8 @@ th {
   line-height: 120%;
   text-align: left;
   margin-top: 0;
-  border-top: 1px solid #888;
-  border-bottom: 1px solid #888;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
 }
 th,
 td {

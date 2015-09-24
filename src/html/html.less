@@ -9,8 +9,12 @@
 @sans-serif: 'CothamSans';
 @serif: 'Charis SIL';
 
-@import "../fonts";
+@black: #000;
+@light-gray: #d8d8d8;
+@dark-gray: #888;
+@blue: blue;
 
+@import "../fonts";
 
 * {
   -moz-box-sizing: border-box;
@@ -39,27 +43,6 @@ a:hover {
 
 /* ---------------------- general blocks ---------------------- */
 
-
-p, dd { /* general text styles */
-  font-family: @sans-serif;
-  text-indent: 30px;
-  font-size: @fontsize;
-  line-height: 125%;
-}
-
-section[data-type="preface"] > h1 + p,
-div[data-type="part"] > h1 + p,
-section[data-type="chapter"] > h1 + p,
-section[data-type="chapter"] > h1 + div.author p,
-section[data-type="sect1"] > h1 + p,
-section[data-type="sect2"] > h2 + p,
-section[data-type="sect3"] > h3 + p {
-  text-indent: 0px; /* first paragraph following a heading has no indent */
-}
-section h2 {
-    font-family: @sans-serif;
-    font-weight: normal;
-}
 
 /* general inlines */
 

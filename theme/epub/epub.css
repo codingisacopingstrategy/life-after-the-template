@@ -75,21 +75,7 @@ td {
 p,
 dd {
   /* general text styles */
-  font-family: sans-serif;
-  text-indent: 20px;
-  font-size: 0.9em;
   line-height: 125%;
-}
-section[data-type="preface"] > h1 + p,
-div[data-type="part"] > h1 + p,
-section[data-type="chapter"] > h1 + p,
-div[data-type="chapter"] > h1 + p section[data-type="chapter"] > h1 + div.author p,
-section[data-type="sect1"] > h1 + p,
-section[data-type="sect2"] > h2 + p,
-section[data-type="sect3"] > h3 + p,
-p {
-  text-indent: 0px;
-  /* first paragraph following a heading has no indent */
 }
 /* ---------------------- general inlines ---------------------- */
 p a {
@@ -236,6 +222,41 @@ nav[data-type="toc"] li[data-type="preface"] ol,
 nav[data-type="toc"] li[data-type="foreword"] ol {
   display: none;
 }
+/* -------------------------------------------------------------- */
+/* ------------------------ General Blocks ---------------------- */
+/* -------------------------------------------------------------- */
+li > p,
+dd p,
+section[data-type="titlepage"] p,
+section[data-type="copyright-page"] p,
+p[data-type="author"],
+p.author,
+section[data-type="preface"] > h1 + p,
+section[data-type="foreword"] > h1 + p,
+div[data-type="part"] > h1 + p,
+section[data-type="chapter"] > h1 + p,
+section[data-type="chapter"] > h1 + div.author p,
+section[data-type="sect1"] > h1 + p,
+section[data-type="sect2"] > h2 + p,
+section[data-type="sect3"] > h3 + p,
+h1 + p,
+h2 + p,
+h3 + p {
+  text-indent: 0;
+  /* first paragraph following a heading has no indent */
+}
+p,
+dd {
+  /* general text styles */
+  font-family: sans-serif;
+  text-indent: 30px;
+  font-size: 1.2em;
+  line-height: 125%;
+}
+section h2 {
+  font-family: sans-serif;
+  font-weight: normal;
+}
 /* page breaks after all chapter-level sections */
 section[data-type="preface"],
 div[data-type="part"],
@@ -348,7 +369,7 @@ dd p {
 table {
   margin-top: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #d8d8d8;
   border-collapse: collapse;
 }
 table caption {
@@ -369,8 +390,8 @@ th {
   line-height: 120%;
   text-align: left;
   margin-top: 0;
-  border-top: 1px solid #888;
-  border-bottom: 1px solid #888;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
 }
 th,
 td {
@@ -626,8 +647,8 @@ div[data-type="tip"],
 div[data-type="caution"],
 div[data-type="important"] {
   /* admonition containers */
-  border-top: 1px solid #888;
-  border-bottom: 1px solid #888;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
   padding: 0;
   margin: 25px 50px 25px 30px;
   page-break-inside: avoid;
@@ -684,9 +705,6 @@ div.index {
 }
 div.index li {
   line-height: 140%;
-}
-div.index a.indexterm {
-  color: #8e0012;
 }
 div.index ul {
   list-style-type: none;
