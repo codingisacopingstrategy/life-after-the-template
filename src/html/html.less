@@ -26,18 +26,12 @@ body {
   max-width: 700px;
   margin: 0 auto;
   padding-top: 80px;
-  border-left: 1px dashed blue;
-  border-right: 1px dashed blue;
+  border-left: 1px dashed @blue;
+  border-right: 1px dashed @blue;
 }
 
-a, a:link, a:visited, a:active {
-  color: black;
-  border: 1px solid blue;
-  text-decoration: none;
-  padding: 2px 2px 0px 2px;
-}
 a:hover {
-  background-color: blue;
+  background-color: @blue;
   color: white;
 }
 
@@ -45,10 +39,6 @@ a:hover {
 
 
 /* general inlines */
-
-p a {
-  display: inline;
-}
 
 @import "../titlepage";
 
@@ -68,7 +58,7 @@ div.navbar {
   left: 0;
   width: 100%;
   padding: 10px 20px 10px 20px;
-  border-bottom: 1px dashed blue;
+  border-bottom: 1px dashed @blue;
 }
 
 div.navbar h1 {
@@ -104,8 +94,8 @@ div.navigation {
   width: 100%;
   padding: 8px 20px 0 20px;
   margin: 30px 0px;
-  border-top: 1px dashed blue;
-  border-bottom: 1px dashed blue;
+  border-top: 1px dashed @blue;
+  border-bottom: 1px dashed @blue;
 }
 
 div.navigation > ul {

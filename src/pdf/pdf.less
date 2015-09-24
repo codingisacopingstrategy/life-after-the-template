@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-@fontsizesmall: 0.9em;
-@fontsizesmaller: 1.1em;
-@fontsize: 1.3em;
-@fontsizelarger: 1.5em;
-@fontsizelarge: 1.8em;
-@fontsizelargest: 2em;
+@fontsizesmall: 9pt;
+@fontsizesmaller: 11pt;
+@fontsize: 14pt;
+@fontsizelarger: 16pt;
+@fontsizelarge: 20pt;
+@fontsizelargest: 22pt;
 
 @heading-sans-serif: 'CothamSans';
 @sans-serif: 'CothamSans';
@@ -15,6 +15,9 @@
 @light-gray: cmyk(0%,0%,0%,15.29%);
 @dark-gray: cmyk(0%,0%,0%,46.67%);
 @blue: cmyk(100%,0%,0%,0%);
+
+@template-border-style: .6pt dashed @blue;
+
 
 @import "../fonts";
 
@@ -32,14 +35,11 @@
 }
 
 @page { /* defining overall trim size and page layout */
-  size: 7in 9.1875in; /* width, height */
-  margin-top: 0.75in; /* white space around the page */
-  margin-bottom: 0.75in;
-  @sidenote {
-    float: outside;
-    width: 1.1in;
-    clear: both;
-  }
+  size: 21cm 29.7cm; /* width, height */
+  margin-top: 2cm; /* white space around the page */
+  margin-bottom: 2cm;
+  border: @template-border-style;
+  marks: none;
 }
 
 /*cover*/
@@ -53,40 +53,48 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 }
 
 @page :left {
-  margin-left: 1.625in;
-  margin-right: 1in;
+  margin-left: 2.5cm;
+  margin-right: 1cm;
   @bottom-left-corner {
+    font-family: @serif;
     font-size: 9pt;
     text-align: left;
-    margin-left: 0.375in;
-    margin-top: 5pt;
+    margin-left: 0;
+    margin-top: 0;
+    border: @template-border-style;
+    border-top: none;
   }
   @top-left {
+    font-family: @serif;
     font-size: 8pt;
     text-align: left;
-    margin-left: -0.65in;
-    margin-top: 6pt;
+    margin-left: 0;
+    margin-top: 0;
+    border: @template-border-style;
+    border-bottom: none;
   }
-  @sidenote { margin-left: -1.25in; }
 }
 
 @page :right {
-  margin-right: 1.625in;
-  margin-left: 1in;
+  margin-right: 2.5cm;
+  margin-left: 1cm;
   @bottom-right-corner {
     font-size: 9pt;
     text-align: right;
-    margin-top: 5pt;
-    margin-right: 0.375in;
+    margin-top: 0;
+    margin-right: 0;
+    border: @template-border-style;
+    border-top: none;
   }
   @top-right {
-    font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
+    font-family: @serif;
     font-size: 8pt;
     text-align: right;
-    margin-right: -0.65in;
-    margin-top: 6pt;
+    margin-right: 0;
+    margin-top: 0;
+    border: @template-border-style;
+    border-bottom: none;
   }
-  @sidenote { margin-right: -1.25in; }
 }
 
 @page :blank { /* defining a truly blank master page */
@@ -121,7 +129,6 @@ body[data-type="book"] {
 section[data-type="halftitlepage"],
 section[data-type="titlepage"] {
   page: blank;
-  text-align: right;
   page-break-before: right; /* titlepages always start on a right-hand page */
   page-break-after: always;
 }

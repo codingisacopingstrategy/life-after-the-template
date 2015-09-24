@@ -154,7 +154,7 @@ nav[data-type="toc"] a {
 nav[data-type="toc"] li[data-type="chapter"],
 nav[data-type="toc"] li[data-type="part"],
 nav[data-type="toc"] li[data-type="appendix"] {
-  font-size: 1.3em;
+  font-size: 14pt;
   line-height: 120%;
   margin-left: 0;
   text-indent: 0;
@@ -183,7 +183,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 /* entries for sub-sections */
 nav[data-type="toc"] li[data-type="chapter"] ol {
   font-family: 'CothamSans';
-  font-size: 1.3em;
+  font-size: 14pt;
   line-height: 120%;
   margin-left: 20px;
   text-indent: -10px;
@@ -197,7 +197,7 @@ nav[data-type="toc"] li[data-type="preface"],
 nav[data-type="toc"] li[data-type="foreword"],
 nav[data-type="toc"] li[data-type="glossary"],
 nav[data-type="toc"] li[data-type="index"] {
-  font-size: 1.3em;
+  font-size: 14pt;
   line-height: 120%;
 }
 nav[data-type="toc"] li[data-type="preface"] ol,
@@ -232,8 +232,20 @@ dd {
   /* general text styles */
   font-family: 'CothamSans';
   text-indent: 30px;
-  font-size: 1.3em;
+  font-size: 14pt;
   line-height: 125%;
+}
+a,
+a:link,
+a:visited,
+a:active {
+  color: black;
+  border: 1px solid cmyk(100%, 0%, 0%, 0%);
+  text-decoration: none;
+  padding: 2px 2px 0px 2px;
+}
+p a {
+  display: inline;
 }
 section h2 {
   font-family: 'CothamSans';
@@ -246,18 +258,18 @@ section[data-type="chapter"],
 section[data-type="appendix"] {
   page-break-after: always;
 }
-section[data-type="sect1"] {
-  /* A-level sections */
+/*
+section[data-type="sect1"] { // A-level sections
   margin-left: 20px;
 }
-section[data-type="sect2"] {
-  /* B-level sections */
+
+section[data-type="sect2"] { // B-level sections
   margin-left: 20px;
 }
-section[data-type="sect3"] h3 {
-  /* C-level sections */
+
+section[data-type="sect3"] h3 { // C-level sections
   margin-left: 20px;
-}
+}*/
 /* ---------------------- headings ---------------------- */
 /* heading font is sans serif */
 nav[data-type="toc"] > h1,
@@ -281,7 +293,7 @@ section[data-type="sect3"] h3 {
 section[data-type="preface"] > h1,
 section[data-type="chapter"] > h1,
 section[data-type="appendix"] > h1 {
-  font-size: 2em;
+  font-size: 22pt;
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: left;
@@ -289,25 +301,25 @@ section[data-type="appendix"] > h1 {
 /* section headings */
 section[data-type="sect1"] h1 {
   /* A-level headings */
-  font-size: 1.8em;
+  font-size: 20pt;
   margin-top: 40px;
 }
 section[data-type="sect2"] h2,
 section[data-type="titlepage"] h2 {
   /* B-level headings */
   font-family: 'CothamSans';
-  font-size: 1.5em;
+  font-size: 16pt;
   font-weight: normal;
 }
 section[data-type="sect3"] h3 {
   /* C-level headings */
-  font-size: 1.5em;
+  font-size: 16pt;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 /* parts */
 div[data-type="part"] > h1 {
-  font-size: 2em;
+  font-size: 22pt;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 70px;
@@ -334,7 +346,7 @@ dl {
 dt {
   /* definition list terms */
   font-family: 'CothamSans';
-  font-size: 1.1em;
+  font-size: 11pt;
   line-height: 120%;
   margin-top: 15px;
   margin-bottom: 4px;
@@ -356,7 +368,7 @@ table {
 }
 table caption {
   font-family: 'CothamSans';
-  font-size: 0.9em;
+  font-size: 9pt;
   line-height: 120%;
   text-align: left;
   margin: 0 0 30px 0;
@@ -368,7 +380,7 @@ tr {
 th {
   /* table heading rows */
   font-family: 'CothamSans';
-  font-size: 0.9em;
+  font-size: 9pt;
   line-height: 120%;
   text-align: left;
   margin-top: 0;
@@ -409,17 +421,18 @@ figure {
   page-break-inside: avoid;
 }
 figure img,
-figure video {
+figure video,
+figure svg {
   /* figure images */
   border-top: 1px solid cmyk(100%, 0%, 0%, 0%);
   border-bottom: 1px solid cmyk(100%, 0%, 0%, 0%);
   padding: 10px 0 10px 0;
   max-width: 100%;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 figcaption {
   font-family: 'Charis SIL';
-  font-size: 1.3em;
+  font-size: 14pt;
   font-style: italic;
   line-height: 120%;
   display: block;
@@ -435,14 +448,14 @@ div.sidebar {
 aside h1 {
   /* sidebar titles */
   font-family: 'CothamSans';
-  font-size: 1.8em;
+  font-size: 20pt;
   font-weight: normal;
 }
 aside h5,
 div.sidebar h5 {
   /* sidebar titles */
   font-family: 'CothamSans';
-  font-size: 1.3em;
+  font-size: 14pt;
   line-height: 120%;
   text-align: center;
   margin: 0;
@@ -453,14 +466,14 @@ div.sidebar h6 {
   /* sidebar subtitles */
   font-family: 'CothamSans';
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 11pt;
   line-height: 120%;
 }
 aside p,
 div.sidebar p {
   /* sidebar text */
   font-family: 'Charis SIL';
-  font-size: 1.5em;
+  font-size: 16pt;
   line-height: 130%;
   text-indent: 0;
   margin-top: 6px;
@@ -487,7 +500,7 @@ div[data-type="important"] h1 {
   color: #000;
   font-family: 'CothamSans';
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 11pt;
   text-transform: uppercase;
   text-align: center;
   margin: 4px 0;
@@ -500,7 +513,7 @@ div[data-type="caution"] p,
 div[data-type="important"] p {
   /* admonition text */
   font-family: 'CothamSans';
-  font-size: 1.5em;
+  font-size: 16pt;
   line-height: 120%;
   text-indent: 0in;
 }
@@ -512,14 +525,14 @@ code {
 }
 pre {
   /* code blocks */
-  font-size: 1.1em;
+  font-size: 11pt;
   line-height: 120%;
   margin: 10px;
   overflow-x: auto;
 }
 code {
   /* inline code */
-  font-size: 1.1em;
+  font-size: 11pt;
   line-height: 120%;
 }
 table pre {
@@ -537,7 +550,7 @@ table code {
 div[data-type="example"] h5 {
   /* titles for formal code examples */
   font-family: 'CothamSans';
-  font-size: 0.9em;
+  font-size: 9pt;
   line-height: 120%;
   border-bottom: 1px solid cmyk(0%, 0%, 0%, 15.29%);
   padding-bottom: 6px;
@@ -546,7 +559,7 @@ div[data-type="example"] h5 {
 /* ---------------------- blockquotes ---------------------- */
 blockquote {
   font-family: 'CothamSans';
-  font-size: 1.1em;
+  font-size: 11pt;
   line-height: 130%;
   margin-left: 30px;
   margin-right: 30px;
@@ -558,18 +571,15 @@ blockquote p {
   display: none;
 }
 @page {
-  size: 7in 9.1875in;
-  margin-top: 0.75in;
-  margin-bottom: 0.75in;
+  size: 21cm 29.7cm;
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+  border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  marks: none;
   
   /* defining overall trim size and page layout */
   /* width, height */
   /* white space around the page */
-  @sidenote {
-    float: outside;
-    width: 1.1in;
-    clear: both;
-  }
 }
 /*cover*/
 figure[data-type="cover"] {
@@ -580,44 +590,48 @@ body[data-type="book"] > figure[data-type="cover"] + section {
   page-break-before: right;
 }
 @page :left {
-  margin-left: 1.625in;
-  margin-right: 1in;
+  margin-left: 2.5cm;
+  margin-right: 1cm;
   
   @bottom-left-corner {
+    font-family: 'Charis SIL';
     font-size: 9pt;
     text-align: left;
-    margin-left: 0.375in;
-    margin-top: 5pt;
+    margin-left: 0;
+    margin-top: 0;
+    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: none;
   }
   @top-left {
+    font-family: 'Charis SIL';
     font-size: 8pt;
     text-align: left;
-    margin-left: -0.65in;
-    margin-top: 6pt;
-  }
-  @sidenote {
-    margin-left: -1.25in;
+    margin-left: 0;
+    margin-top: 0;
+    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: none;
   }
 }
 @page :right {
-  margin-right: 1.625in;
-  margin-left: 1in;
+  margin-right: 2.5cm;
+  margin-left: 1cm;
   
   @bottom-right-corner {
     font-size: 9pt;
     text-align: right;
-    margin-top: 5pt;
-    margin-right: 0.375in;
+    margin-top: 0;
+    margin-right: 0;
+    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: none;
   }
   @top-right {
-    font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
+    font-family: 'Charis SIL';
     font-size: 8pt;
     text-align: right;
-    margin-right: -0.65in;
-    margin-top: 6pt;
-  }
-  @sidenote {
-    margin-right: -1.25in;
+    margin-right: 0;
+    margin-top: 0;
+    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: none;
   }
 }
 @page :blank {
@@ -654,7 +668,6 @@ body[data-type="book"] {
 section[data-type="halftitlepage"],
 section[data-type="titlepage"] {
   page: blank;
-  text-align: right;
   page-break-before: right;
   /* titlepages always start on a right-hand page */
   page-break-after: always;

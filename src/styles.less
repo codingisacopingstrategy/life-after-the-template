@@ -24,6 +24,17 @@ p, dd { /* general text styles */
   line-height: 125%;
 }
 
+a, a:link, a:visited, a:active {
+  color: black;
+  border: 1px solid @blue;
+  text-decoration: none;
+  padding: 2px 2px 0px 2px;
+}
+
+p a {
+  display: inline;
+}
+
 section h2 {
     font-family: @sans-serif;
     font-weight: normal;
@@ -38,18 +49,18 @@ section[data-type="appendix"] {
   page-break-after: always;
 }
 
-
-section[data-type="sect1"] { /* A-level sections */
+/*
+section[data-type="sect1"] { // A-level sections
   margin-left: 20px;
 }
 
-section[data-type="sect2"] { /* B-level sections */
+section[data-type="sect2"] { // B-level sections
   margin-left: 20px;
 }
 
-section[data-type="sect3"] h3 { /* C-level sections */
+section[data-type="sect3"] h3 { // C-level sections
   margin-left: 20px;
-}
+}*/
 
 
 /* ---------------------- headings ---------------------- */
@@ -211,12 +222,12 @@ figure { /* figure containers */
   page-break-inside: avoid;
 }
 
-figure img, figure video { /* figure images */
+figure img, figure video, figure svg { /* figure images */
   border-top: 1px solid @blue;
   border-bottom: 1px solid @blue;
   padding: 10px 0 10px 0;
   max-width: 100%;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 figcaption {
