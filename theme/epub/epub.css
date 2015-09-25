@@ -1,3 +1,6 @@
+.print-only {
+  display: none;
+}
 /* O'Reilly Media, 2014; version 4.0.0 */
 /* reset */
 html,
