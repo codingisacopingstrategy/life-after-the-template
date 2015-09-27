@@ -651,6 +651,9 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 body {
   hyphens: auto;
 }
+p {
+  page-break-inside: avoid;
+}
 /* general inlines */
 /* counters add auto-numbering to elements in the book.
    This reset initiates the counters, enabling them
@@ -664,8 +667,6 @@ body[data-type="book"] {
 section[data-type="halftitlepage"],
 section[data-type="titlepage"] {
   page: blank;
-  page-break-before: right;
-  /* titlepages always start on a right-hand page */
   page-break-after: always;
 }
 /* -------------------------------------------------------------- */
@@ -806,6 +807,22 @@ nav[data-type="toc"] span[data-type="footnote"] {
 /* --------------------------- Headers ---------------------------*/
 /* -------------------------------------------------------------- */
 /* preface, chapter, and appendix headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  page-break-after: avoid;
+}
+h1 + figure,
+h2 + figure,
+h3 + figure,
+h4 + figure,
+h5 + figure,
+h6 + figure {
+  page-break-before: avoid;
+}
 section[data-type="preface"] > h1 {
   string-set: ChapterTitle self;
 }
