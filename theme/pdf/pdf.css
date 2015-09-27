@@ -574,6 +574,8 @@ blockquote p {
   size: 21cm 29.7cm;
   margin-top: 2cm;
   margin-bottom: 2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
   border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
   marks: none;
   
@@ -590,9 +592,6 @@ body[data-type="book"] > figure[data-type="cover"] + section {
   page-break-before: right;
 }
 @page :left {
-  margin-left: 2.5cm;
-  margin-right: 1cm;
-  
   @bottom-left-corner {
     font-family: 'Charis SIL';
     font-size: 9pt;
@@ -613,9 +612,6 @@ body[data-type="book"] > figure[data-type="cover"] + section {
   }
 }
 @page :right {
-  margin-right: 2.5cm;
-  margin-left: 1cm;
-  
   @bottom-right-corner {
     font-size: 9pt;
     text-align: right;

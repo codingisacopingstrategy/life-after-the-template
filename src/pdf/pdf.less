@@ -38,6 +38,8 @@
   size: 21cm 29.7cm; /* width, height */
   margin-top: 2cm; /* white space around the page */
   margin-bottom: 2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
   border: @template-border-style;
   marks: none;
 }
@@ -53,8 +55,6 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 }
 
 @page :left {
-  margin-left: 2.5cm;
-  margin-right: 1cm;
   @bottom-left-corner {
     font-family: @serif;
     font-size: 9pt;
@@ -76,8 +76,6 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 }
 
 @page :right {
-  margin-right: 2.5cm;
-  margin-left: 1cm;
   @bottom-right-corner {
     font-size: 9pt;
     text-align: right;
