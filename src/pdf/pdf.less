@@ -322,6 +322,7 @@ section[data-type="foreword"] > h1 {
 section[data-type="chapter"] > h1 {
   string-set: ChapterTitle self, SectionTitle self;
   counter-increment: ChapterNumber;
+  counter-reset: SectOneNumber;
 }
 
 section[data-type="appendix"] > h1 {
@@ -329,9 +330,35 @@ section[data-type="appendix"] > h1 {
   counter-increment: AppendixNumber;
 }
 
-section[data-type="chapter"] > h1:after {
-  content: counter(ChapterNumber);
+section[data-type="chapter"] > h1:before {
+  content: counter(ChapterNumber)". ";
 }
+
+section[data-type="sect1"] > h1 {
+  counter-increment: SectOneNumber;
+  counter-reset: SectTwoNumber;
+}
+
+section[data-type="sect1"] > h1:before {
+  content: counter(ChapterNumber)"."counter(SectOneNumber)". ";
+}
+section[data-type="preface"] > h1 {
+  counter-reset: SectOneNumber;
+}
+
+section[data-type="preface"] > section[data-type="sect1"] > h1:before {
+  content: "I."counter(SectOneNumber)". ";
+}
+
+
+section[data-type="sect2"] > h2 {
+  counter-increment: SectTwoNumber;
+}
+
+section[data-type="sect2"] > h2:before {
+  content: counter(ChapterNumber)"."counter(SectOneNumber)"."counter(SectTwoNumber)". ";
+}
+
 
 section[data-type="appendix"] > h1:after {
   content: counter(AppendixNumber, upper-alpha);
@@ -558,7 +585,7 @@ figcaption:before {
 }
 
 section[data-type="preface"] figcaption:before {
-  content: "Figure P-"counter(FigureNumber)". ";
+  content: "Figure I-"counter(FigureNumber)". ";
 }
 
 section[data-type="foreword"] figcaption:before {
