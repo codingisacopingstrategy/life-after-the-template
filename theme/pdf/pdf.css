@@ -103,15 +103,15 @@ section[data-type="titlepage"] .author {
 /* ---------------------- copyright page ---------------------- */
 section[data-type="copyright-page"] {
   margin-top: 100px;
+  margin-right: 150px;
   page-break-after: always;
 }
 section[data-type="copyright-page"] h1 {
-  font-size: 0.8em;
+  font-family: 'CothamSans';
+  font-size: 16pt;
 }
 section[data-type="copyright-page"] p {
-  font-family: 'CothamSans';
-  font-size: 0.8em;
-  margin: 0;
+  font-size: 11pt;
   text-indent: 0;
 }
 /* dedication */
