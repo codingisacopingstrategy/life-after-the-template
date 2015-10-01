@@ -114,7 +114,7 @@ module.exports = function() {
     var publication = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'atlas.json')).toString('utf-8'));
 
     publication.files.forEach(function (f) {
-        if (f == "toc.html" || f == "copyright.html") { return; }
+        if (f === "toc.html" || f === "copyright.html" || f === "titlepage.html") { return; }
         var filePath = path.resolve(__dirname, f);
         var $doc = $( fs.readFileSync(filePath, 'utf8') );
         $rootList.append( generateToc(levels.chapter, $doc, f) );
