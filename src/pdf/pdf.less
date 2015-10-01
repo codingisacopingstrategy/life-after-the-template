@@ -35,6 +35,25 @@
 }
 
 @page { /* defining overall trim size and page layout */
+  font-family: @serif;
+  font-size: @fontsizesmall;
+
+  @top-left-corner { content: "@top-left-corner"; border-left: @template-border-style; border-top: @template-border-style; border-bottom: @template-border-style }
+  @top-left { content: "@top-left"; border-left: @template-border-style; border-top: @template-border-style; }
+  @top-center { content: "@top-center"; border-left: @template-border-style; border-top: @template-border-style; }
+  @top-right { content: "@top-right"; border-left: @template-border-style; border-top: @template-border-style; }
+  @top-right-corner { content: "@top-right-corner"; border-left: @template-border-style; border-top: @template-border-style; border-right: @template-border-style; }
+  @right-top { content: "@right-top"; border-right: @template-border-style; border-top: @template-border-style; }
+  @right-middle { content: "@right-middle"; border-right: @template-border-style; border-top: @template-border-style; }
+  @right-bottom { content: "@right-bottom"; border-right: @template-border-style; border-top: @template-border-style; }
+  @bottom-right-corner { content: "@bottom-right-corner"; border-right: @template-border-style; border-top: @template-border-style; border-bottom: @template-border-style; }
+  @bottom-right { content: "@bottom-right"; border-right: @template-border-style; border-bottom: @template-border-style; }
+  @bottom-center { content: "@bottom-center"; border-right: @template-border-style; border-bottom: @template-border-style; }
+  @bottom-left { content: "@bottom-left"; border-right: @template-border-style; border-bottom: @template-border-style; }
+  @bottom-left-corner { content: "@bottom-left-corner"; border-right: @template-border-style; border-left: @template-border-style; border-bottom: @template-border-style; }
+  @left-bottom { content: "@left-bottom"; border-left: @template-border-style; border-bottom: @template-border-style; }
+  @left-middle { content: "@left-middle"; border-left: @template-border-style; border-bottom: @template-border-style; }
+  @left-top { content: "left-top"; border-left: @template-border-style; border-bottom: @template-border-style; }
   size: 21cm 29.7cm; /* width, height */
   margin-top: 2cm; /* white space around the page */
   margin-bottom: 2cm;
@@ -54,59 +73,14 @@ body[data-type="book"] > figure[data-type="cover"] + section {
   page-break-before: right;
 }
 
-@page :left {
-  @bottom-left-corner {
-    font-family: @serif;
-    font-size: 9pt;
-    text-align: left;
-    margin-left: 0;
-    margin-top: 0;
-    border: @template-border-style;
-    border-top: none;
-  }
-  @top-left {
-    font-family: @serif;
-    font-size: 8pt;
-    text-align: left;
-    margin-left: 0;
-    margin-top: 0;
-    border: @template-border-style;
-    border-bottom: none;
-  }
-}
-
-@page :right {
-  @bottom-right-corner {
-    font-size: 9pt;
-    text-align: right;
-    margin-top: 0;
-    margin-right: 0;
-    border: @template-border-style;
-    border-top: none;
-  }
-  @top-right {
-    font-family: @serif;
-    font-size: 8pt;
-    text-align: right;
-    margin-right: 0;
-    margin-top: 0;
-    border: @template-border-style;
-    border-bottom: none;
-  }
-}
-
-@page :blank { /* defining a truly blank master page */
-  @bottom-left-corner { content: none; }
-  @bottom-right-corner { content: none; }
-  @top-right { content: none; }
-  @top-left { content: none; }
+@page copyright {
+  margin-right: 4cm;
 }
 
 /* -------------------------------------------------------------- */
 /* ------------------------- Global Styles ---------------------- */
 /* -------------------------------------------------------------- */
 body {
-  hyphens: auto;
 }
 
 p {
@@ -141,7 +115,7 @@ section[data-type="titlepage"] {
 /* ------------------------ Copyright Page -----------------------*/
 /* -------------------------------------------------------------- */
 section[data-type="copyright-page"] {
-  page: blank;
+  page: copyright;
   page-break-after: always;
 }
 
@@ -153,45 +127,21 @@ section[data-type="dedication"] {
   page-break-after: always;
 }
 
-/* -------------------------------------------------------------- */
-/* --------------------------- Praise ----------------------------*/
-/* -------------------------------------------------------------- */
-
-section[data-type="dedication"].praise blockquote {
-  hyphens: none;
-}
-
-
-/*--Begin support for emphasis in praise text and attributions--*/
-
-section[data-type="dedication"].praise blockquote span.attribution em.citetitle {
-  font-style: normal;
-}
-
-section[data-type="dedication"].praise blockquote span.attribution em.citetitle span.emphasis em {
-  font-style: italic;
-}
-
-section[data-type="dedication"].praise blockquote em.p span.emphasis em {
-  font-style: italic;
-}
-
-section[data-type="dedication"].praise blockquote p span.emphasis em {
-  font-style: italic;
-}
-
-/*--End support for emphasis in praise text and attributions--*/
 
 /* -------------------------------------------------------------- */
 /* ---------------------- Table of Contents ----------------------*/
 /* -------------------------------------------------------------- */
+
+@page toc {
+  margin-bottom: .5cm;
+}
 
 @page toc:first {
   @bottom-right-corner {
     content: counter(page, lower-roman);
   }
   @top-right {
-    content: none;
+    content: inherit;
   }
 }
 
@@ -210,21 +160,6 @@ section[data-type="dedication"].praise blockquote p span.emphasis em {
   }
   @top-right {
     content: "Table of Contents";
-  }
-}
-
-@page toc:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
   }
 }
 
@@ -293,10 +228,6 @@ nav[data-type="toc"] li[data-type="appendix"]::marker {
   counter-increment: AppendixNumberTOC;
 }
 
-/*hides footnotes from appearing in the TOC*/
-nav[data-type="toc"] span[data-type="footnote"] {
- display: none;
-}
 
 /* -------------------------------------------------------------- */
 /* --------------------------- Headers ---------------------------*/
@@ -408,20 +339,6 @@ section[data-type="sect1"] > h1 { /* A-level headings */
   }
 }
 
-@page preface:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
-  }
-}
 
 section[data-type="preface"] {
   page: preface;
@@ -507,7 +424,7 @@ div[data-type="part"] > h1:before {
 
 @page chapter:first {
   @top-right {
-    content: none;
+    content: inherit;
   }
 }
 
@@ -516,7 +433,7 @@ div[data-type="part"] > h1:before {
     content: counter(page);
   }
   @top-left {
-    content: "CHAPTER "counter(ChapterNumber)": "string(ChapterTitle);
+    content: "CHAPTER "counter(ChapterNumber);
   }
 }
 
@@ -524,25 +441,8 @@ div[data-type="part"] > h1:before {
   @bottom-right-corner {
     content: counter(page);
   }
-  @top-right {
-    content: string(SectionTitle);
-  }
 }
 
-@page chapter:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
-  }
-}
 
 /* --------------------------------------------------------------------- */
 /* ------------------------------ Tables ------------------------------- */

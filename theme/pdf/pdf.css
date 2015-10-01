@@ -571,6 +571,8 @@ blockquote p {
   display: none;
 }
 @page {
+  font-family: 'Charis SIL';
+  font-size: 9pt;
   size: 21cm 29.7cm;
   margin-top: 2cm;
   margin-bottom: 2cm;
@@ -580,6 +582,90 @@ blockquote p {
   marks: none;
   
   /* defining overall trim size and page layout */
+  @top-left-corner {
+    content: "@top-left-corner";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @top-left {
+    content: "@top-left";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @top-center {
+    content: "@top-center";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @top-right {
+    content: "@top-right";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @top-right-corner {
+    content: "@top-right-corner";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @right-top {
+    content: "@right-top";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @right-middle {
+    content: "@right-middle";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @right-bottom {
+    content: "@right-bottom";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @bottom-right-corner {
+    content: "@bottom-right-corner";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-top: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @bottom-right {
+    content: "@bottom-right";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @bottom-center {
+    content: "@bottom-center";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @bottom-left {
+    content: "@bottom-left";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @bottom-left-corner {
+    content: "@bottom-left-corner";
+    border-right: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @left-bottom {
+    content: "@left-bottom";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @left-middle {
+    content: "@left-middle";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
+  @left-top {
+    content: "left-top";
+    border-left: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+    border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
+  }
   /* width, height */
   /* white space around the page */
 }
@@ -591,59 +677,8 @@ body[data-type="book"] > figure[data-type="cover"] + section {
   counter-reset: page 1;
   page-break-before: right;
 }
-@page :left {
-  @bottom-left-corner {
-    font-family: 'Charis SIL';
-    font-size: 9pt;
-    text-align: left;
-    margin-left: 0;
-    margin-top: 0;
-    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
-    border-top: none;
-  }
-  @top-left {
-    font-family: 'Charis SIL';
-    font-size: 8pt;
-    text-align: left;
-    margin-left: 0;
-    margin-top: 0;
-    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
-    border-bottom: none;
-  }
-}
-@page :right {
-  @bottom-right-corner {
-    font-size: 9pt;
-    text-align: right;
-    margin-top: 0;
-    margin-right: 0;
-    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
-    border-top: none;
-  }
-  @top-right {
-    font-family: 'Charis SIL';
-    font-size: 8pt;
-    text-align: right;
-    margin-right: 0;
-    margin-top: 0;
-    border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
-    border-bottom: none;
-  }
-}
-@page :blank {
-  /* defining a truly blank master page */
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
-  }
+@page copyright {
+  margin-right: 4cm;
 }
 /* -------------------------------------------------------------- */
 /* ------------------------- Global Styles ---------------------- */
@@ -673,7 +708,7 @@ section[data-type="titlepage"] {
 /* ------------------------ Copyright Page -----------------------*/
 /* -------------------------------------------------------------- */
 section[data-type="copyright-page"] {
-  page: blank;
+  page: copyright;
   page-break-after: always;
 }
 /* -------------------------------------------------------------- */
@@ -683,34 +718,17 @@ section[data-type="dedication"] {
   page-break-after: always;
 }
 /* -------------------------------------------------------------- */
-/* --------------------------- Praise ----------------------------*/
-/* -------------------------------------------------------------- */
-section[data-type="dedication"].praise blockquote {
-  hyphens: none;
-}
-/*--Begin support for emphasis in praise text and attributions--*/
-section[data-type="dedication"].praise blockquote span.attribution em.citetitle {
-  font-style: normal;
-}
-section[data-type="dedication"].praise blockquote span.attribution em.citetitle span.emphasis em {
-  font-style: italic;
-}
-section[data-type="dedication"].praise blockquote em.p span.emphasis em {
-  font-style: italic;
-}
-section[data-type="dedication"].praise blockquote p span.emphasis em {
-  font-style: italic;
-}
-/*--End support for emphasis in praise text and attributions--*/
-/* -------------------------------------------------------------- */
 /* ---------------------- Table of Contents ----------------------*/
 /* -------------------------------------------------------------- */
+@page toc {
+  margin-bottom: .5cm;
+}
 @page toc:first {
   @bottom-right-corner {
     content: counter(page, lower-roman);
   }
   @top-right {
-    content: none;
+    content: inherit;
   }
 }
 @page toc:left {
@@ -727,20 +745,6 @@ section[data-type="dedication"].praise blockquote p span.emphasis em {
   }
   @top-right {
     content: "Table of Contents";
-  }
-}
-@page toc:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
   }
 }
 nav[data-type="toc"] {
@@ -798,10 +802,6 @@ li[data-type="sect2"] {
 nav[data-type="toc"] li[data-type="appendix"]::marker {
   content: counter(AppendixNumberTOC, upper-alpha) ".";
   counter-increment: AppendixNumberTOC;
-}
-/*hides footnotes from appearing in the TOC*/
-nav[data-type="toc"] span[data-type="footnote"] {
-  display: none;
 }
 /* -------------------------------------------------------------- */
 /* --------------------------- Headers ---------------------------*/
@@ -906,20 +906,6 @@ section[data-type="sect1"] > h1 {
     content: counter(page, lower-roman);
   }
 }
-@page preface:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
-  }
-}
 section[data-type="preface"] {
   page: preface;
   page-break-before: right;
@@ -996,7 +982,7 @@ div[data-type="part"] > h1:before {
 /* -------------------------------------------------------------- */
 @page chapter:first {
   @top-right {
-    content: none;
+    content: inherit;
   }
 }
 @page chapter:left {
@@ -1004,29 +990,12 @@ div[data-type="part"] > h1:before {
     content: counter(page);
   }
   @top-left {
-    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle);
+    content: "CHAPTER " counter(ChapterNumber);
   }
 }
 @page chapter:right {
   @bottom-right-corner {
     content: counter(page);
-  }
-  @top-right {
-    content: string(SectionTitle);
-  }
-}
-@page chapter:blank {
-  @bottom-left-corner {
-    content: none;
-  }
-  @bottom-right-corner {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-  @top-left {
-    content: none;
   }
 }
 /* --------------------------------------------------------------------- */
