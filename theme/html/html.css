@@ -122,8 +122,6 @@ section[data-type="titlepage"] .author {
 }
 /* ---------------------- copyright page ---------------------- */
 section[data-type="copyright-page"] {
-  margin-top: 100px;
-  margin-right: 150px;
   page-break-after: always;
 }
 section[data-type="copyright-page"] h1 {
