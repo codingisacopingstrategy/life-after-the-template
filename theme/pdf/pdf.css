@@ -88,7 +88,7 @@ section[data-type="titlepage"] h2 {
 }
 /* styling and positioning for author names and other text */
 section[data-type="titlepage"] p:first-of-type {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 section[data-type="titlepage"] p {
   line-height: 16pt;
