@@ -684,7 +684,7 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 /* ------------------------- Global Styles ---------------------- */
 /* -------------------------------------------------------------- */
 body {
-  hyphens: auto;
+  hyphens: manual;
 }
 p {
   page-break-inside: avoid;
