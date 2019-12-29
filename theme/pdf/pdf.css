@@ -576,13 +576,15 @@ blockquote p {
 @page {
   font-family: 'Charis SIL';
   font-size: 9pt;
-  size: 21cm 29.7cm;
+  size: 210mm 297mm;
+  prince-trim: 0.5cm;
+  prince-bleed: 0;
   margin-top: 2cm;
   margin-bottom: 2cm;
   margin-left: 2cm;
   margin-right: 2cm;
   border: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
-  marks: none;
+  marks: crop;
   
   /* defining overall trim size and page layout */
   @top-left-corner {
@@ -670,7 +672,6 @@ blockquote p {
     border-bottom: 0.6pt dashed cmyk(100%, 0%, 0%, 0%);
   }
   /* width, height */
-  /* white space around the page */
 }
 /*cover*/
 figure[data-type="cover"] {

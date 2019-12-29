@@ -54,13 +54,15 @@
   @left-bottom { content: "@left-bottom"; border-left: @template-border-style; border-bottom: @template-border-style; }
   @left-middle { content: "@left-middle"; border-left: @template-border-style; border-bottom: @template-border-style; }
   @left-top { content: "left-top"; border-left: @template-border-style; border-bottom: @template-border-style; }
-  size: 21cm 29.7cm; /* width, height */
-  margin-top: 2cm; /* white space around the page */
+  size: 210mm 297mm; /* width, height */
+  prince-trim: 0.5cm;
+  prince-bleed: 0;
+  margin-top: 2cm;
   margin-bottom: 2cm;
   margin-left: 2cm;
   margin-right: 2cm;
   border: @template-border-style;
-  marks: none;
+  marks: crop;
 }
 
 /*cover*/
